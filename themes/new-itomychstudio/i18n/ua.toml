@@ -1,0 +1,70 @@
+[404_text]
+other = "На жаль, не вдалося знайти потрібної сторінки."
+[apply_cv]
+other = "Надіслати резюме"
+[apply_for_position]
+other = "Надіслати заявку"
+[contact_us]
+other = "Зворотній зв'язок"
+[contact_us_text]
+other = "Якщо у вас є питання чи пропозиції, залишайте їх у будь-який час. Ми будемо раді дати на них відповідь."
+[financial_app]
+other = "Фінансовий додаток"
+[form_attach_cv]
+other = "+ Додати резюме"
+[form_contact_us]
+other = "Зворотній зв’язок"
+[form_contact_us_email]
+other = "Електронна пошта *"
+[form_contact_us_name]
+other = "Повне ім’я *"
+[form_contat_submit]
+other = "Відправити повідомлення"
+[form_cover_letter]
+other = "Супровідний лист:"
+[form_cover_letter_placeholder]
+other = "Ви можете додати деяку інформацію про вас, посилання на git або реальні проекти"
+[form_email_filed]
+other = "Електронна пошта *:"
+[form_email_filed_placeholder]
+other = "jdoe@gmail.com"
+[form_message]
+other = "Повідомлення"
+[form_name_filed]
+other = "Повне ім'я *:"
+[form_name_filed_placeholder]
+other = "Іванов Іван"
+[form_phone_filed]
+other = "Номер телефону"
+[form_position]
+other = "Позиція"
+[form_submit]
+other = "Надіслати заявку"
+[from_idea_to_product]
+other = "Від ідеї до продукту"
+[go_to_home_page]
+other = "На головну"
+[join_team]
+other = "Бажаєш приєднатися до команди?"
+[latest_project]
+other = "Останній проект"
+[more_photos]
+other = "Більше фотографій"
+[more_projects]
+other = "Більше проектів"
+[more_vacancies]
+other = "Більше вакансій"
+[other_projects]
+other = "Інші проекти"
+[our_projects]
+other = "Наші проекти"
+[page_not_found]
+other = "Сторінку не знайдено"
+[upload_cv]
+other = "Надіслати резюме"
+[upload_cv_text]
+other = "Наща команда стрімко зростає, тому пошук кваліфікованних фахівців не пріпіняється ні на мить. Ми переглядвємо без винятку всі резюме, що нам надходять. Чикаємо і на твоє:"
+[vacancies]
+other = "Вакансії"
+[view_case_study]
+other = "Переглянути"

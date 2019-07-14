@@ -1,0 +1,86 @@
+[404_text]
+other = "Sorry, we could not find the page you are looking for."
+[apply_cv]
+other = "Apply your CV"
+[send_cv]
+other = "Send your CV"
+[apply_for_position]
+other = "Apply for the position"
+[contact_us]
+other = "Contact us"
+[contact_us_text]
+other = "If you have any questions or suggestions, leave them in the form below at any time. We will be happy to answer."
+[financial_app]
+other = "Financial App"
+[form_attach_cv]
+other = "+ Attach your CV file"
+[form_contact_us]
+other = "Contact Us"
+[form_contact_us_email]
+other = "Email *"
+[form_contact_us_name]
+other = "Full name *"
+[form_contat_submit]
+other = "Send Message"
+[form_cover_letter]
+other = "Cover letter"
+[form_cover_letter_placeholder]
+other = "You can add some info about you, links to git or on real projects"
+[form_position]
+other = "Position"
+# [form_department]
+# other = "Department"
+# [form_department_backend]
+# other = "Backend"
+# [form_department_choose]
+# other = "Choose department"
+# [form_department_frontend]
+# other = "Frontend"
+[form_email_filed]
+other = "Email *"
+# [form_email_filed_error]
+# other = "Please check your email"
+[form_email_filed_placeholder]
+other = "jdoe@gmail.com"
+[form_message]
+other = "Message"
+[form_name_filed]
+other = "Full name *"
+# [form_name_filed_error]
+# other = "Please enter your name"
+[form_name_filed_placeholder]
+other = "John Doe"
+[form_phone_filed]
+other = "Phone"
+[form_submit]
+other = "Submit Application"
+[from_idea_to_product]
+other = "From Idea to Product"
+[go_to_home_page]
+other = "Go to home page"
+[join_team]
+other = "Want to join our team?"
+[latest_project]
+other = "Latest project"
+[more_photos]
+other = "More Photos"
+[more_projects]
+other = "More projects"
+[more_vacancies]
+other = "More vacancies"
+[other_projects]
+other = "Other projects"
+[our_projects]
+other = "Our projects"
+[page_not_found]
+other = "Page not found"
+[upload_cv]
+other = "Upload CV"
+[upload_cv_text]
+other = "Our company is rapidly growing, so the search for qualified experts never stops. We consider all the CVs we receive without exception. We are awaiting yours as well:"
+[vacancies]
+other = "Vacancies"
+[view_case_study]
+other = "View Case Study"
+[no_open_vacancies]
+other = "There are no open vacancies currently. But you still can send you CV."

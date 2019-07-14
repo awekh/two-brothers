@@ -1,0 +1,50 @@
+{{ define "main" }}
+
+{{ with .Site.Data.en.dozens }}
+    <section class="s-page-title">
+        <div class="container container--sm">
+            <h2 class="h2">{{ .Title }}</h2>
+            <p class="description">{{ .Description }}</p>
+        </div>
+    </section>
+
+    <section class="section section-single-project">
+        <div class="container container--sm">
+            <div class="section-banner">
+
+                {{ with .Params.image }}
+
+                    <img data-src="{{ . | absURL }}" class="lazyload">
+
+                {{ end}}
+
+            </div>
+            <div class="section-project-info">
+                <div class="info-box">
+                    {{ .Content }}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-project-slider">
+        <div class="container">
+            <div class="project-slider">
+
+                {{ range .Params.gallery }}
+                
+                    <div class="item">
+                        <div class="card-project">
+                            <img src="{{ . | absURL }}">
+                        </div>
+                    </div>
+
+                {{ end }}
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- {{ partial "components/other-posts.html" . }} -->
+    {{ end }}
+{{ end }}

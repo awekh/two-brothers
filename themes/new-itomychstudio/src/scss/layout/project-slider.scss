@@ -1,0 +1,85 @@
+.project-slider {
+    position: static;
+    .slick-list {
+        overflow: visible;
+    }
+
+    .slick-slide {
+        margin-right: 30px;
+        width: 388px !important;
+        @include media('<=phone-lg') {
+            margin-right: 20px;
+        }
+        @include media('<=desktop-md') {
+            width: 318px !important;
+        }
+        @include media('<=tablet-sm') {
+            width: 270px !important;
+        }
+        @include media('<=phone-lg') {
+            width: 205px !important;
+        }
+    }
+
+    .slick-next,
+    .slick-prev {
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        width: 100px;
+        min-width: 100px;
+        height: 100px;
+        background: rgba(0, 0, 0, .8);
+        border-radius: 50%;
+        background-position: center;
+        z-index: 1;
+        transition: background 0.8s;
+
+        @include media('<=desktop-md') {
+            min-width: 60px;
+            width: 60px;
+            height: 60px;
+        }
+
+        @include media('<=tablet-sm') {
+            display: none !important;
+        }
+
+        svg {
+            @include media('<=desktop-md') {
+                width: 12px;
+                height: 20px;
+            }
+        }
+
+
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.7) radial-gradient(circle, transparent 1%, rgba(0, 0, 0, 0.7) 1%) center/15000%;
+        }
+
+        &:active {
+            background-color: rgba(0, 0, 0, 0.7);
+            background-size: 100%;
+            transition: background 0s;
+        }
+
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+
+    .slick-prev {
+        right: auto;
+        left: 40px;
+
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    .item {
+        background-color: #f7f7f7;
+    }
+}

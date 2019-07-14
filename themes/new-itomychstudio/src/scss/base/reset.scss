@@ -1,0 +1,137 @@
+// This is base reset for global components.
+//
+// Note: If you use a framework that includes base styling then you need to remove this file.
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+*::selection {
+    background: map-deep-get($colors, 'base', 'selection');
+    color: inherit;
+}
+
+body {
+    @include font-smoothing(on);
+    background: map-deep-get($colors, 'base', 'white');
+    color: map-deep-get($colors, 'base', 'body');
+    font: #{map-get($font-size, 'base')}/#{map-get($line-height, 'base')} #{map-get($fonts, 'base-sans-serif')};
+    min-width: map-get($breakpoints, 'phone-sm');
+    min-height: 100%;
+    @include media('<phone-sm') {
+        opacity: 0;
+    }
+}
+
+.main,
+body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    
+    >div,
+    >section {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+#wrapper {
+    position: relative;
+    overflow-x: hidden;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    @include media('<=phone-lg') {
+        padding-top: 80px;
+    }
+    &.page-not-found {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        main {
+            justify-content: center;
+        }
+        .section-header {
+            margin-top: -120px;
+            @include media('<=desktop-md') {
+                margin-top: -100px;
+            }
+            @include media('<=phone-lg') {
+                margin-top: 0;
+                padding: 20px 0;
+            }
+            .h2 {
+                letter-spacing: 0.5px;
+                margin-bottom: 25px;
+            }
+            .descr {
+                max-width: 380px;
+                font-size: 20px;
+                letter-spacing: -0.1px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.container {
+    max-width: map-get($container-width, 'xl');
+    margin: auto;
+    padding: 0 20px;
+    @include media('>=1920px', '<=desktop-intermediate') {
+        max-width: 1684px;
+    }
+    &--sm {
+        @include media('>=desktop-lg') {
+            max-width: 1684px;
+        }
+    }
+    @include media('<desktop-lg') {
+        max-width: map-get($container-width, 'lg');
+    }
+    @include media('<desktop-intermediate') {
+        padding: 0 100px;
+        max-width: 100%;
+    }
+    @include media('<tablet-lg') {
+        padding: 0 20px;
+    }
+}
+
+// adaptive images
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+// hide tel links on desktop
+@media only screen and (min-width: 1025px) {
+    a[href^="tel"],
+    a[href^="skype"],
+    a[href^="sms"] {
+        cursor: default;
+        pointer-events: none;
+    }
+}
+
+.lazyload,
+.lazyloading {
+    background: url('../../images/gif-loader.gif') no-repeat center center;
+    background-size: 97px 87px;
+    background-color: #f7f7f7;
+}
+
+.lazyloaded {
+    background: transparent;
+    transition: background .5s;
+}

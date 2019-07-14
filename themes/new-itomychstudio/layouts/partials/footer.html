@@ -1,0 +1,55 @@
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+        <div class="footer-pannel">
+            <h2 class="h2">{{ i18n "join_team" }}</h2>
+            <a href="/cv_upload" class="button cta cv" data-text="{{ i18n "send_cv" }}">
+                <span>{{ i18n "send_cv" }}</span>
+            </a>
+        </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+
+        <div class="footer-bottom-pannel" style="justify-content:flex-end;-webkit-box-pack:end;-ms-flex-pack:end;">
+        <!-- <ul class="list list-lang-switch">
+            
+            {{ $currentLanguage := .Site.Language.Lang }}
+            
+            {{ $currentPage := . }}
+
+            {{ range .AllTranslations }}
+                <li {{ if eq $currentLanguage .Language.Lang }}class="active"{{ end }}>
+                    <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+                </li>
+            {{ end }}
+
+        </ul> -->
+
+            <span class="copyright" style="left: 35px; transform: none;">© ITOMYCH STUDIO 2011-<span id="currentYear"></span><p style="text-align: left;">Build version {{ getenv "HUGO_BUILD_NUMBER" }}</p></span>
+
+            <ul class="list list-social">
+                <!--<li>
+                    <a href="{{ .Site.Params.socials.Medium }}" target="_blank" rel="noreferrer noopener" aria-label="link to medium">
+                        <span class="icon icon-ic_social_medium"></span>
+                    </a>
+                </li>-->
+                <li>
+                    <a href="{{ .Site.Params.socials.Linkedin }}" target="_blank" rel="noreferrer noopener" aria-label="link to linkedin">
+                        <span class="icon icon-ic_social_linkedin"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ .Site.Params.socials.Facebook }}" target="_blank" rel="noreferrer noopener" aria-label="link to facebook">
+                        <span class="icon icon-ic_social_facebook"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ .Site.Params.socials.Twitter }}" target="_blank" rel="noreferrer noopener" aria-label="link to twitter">
+                        <span class="icon icon-ic_social_twitter"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>

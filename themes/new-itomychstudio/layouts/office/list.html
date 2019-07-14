@@ -1,0 +1,188 @@
+{{ define "main" }}
+
+<section class="s-page-title">
+  <div class="container container--sm">
+    <h2 class="h2">{{ .Title }}</h2>
+    <p class="description">{{ .Description }}</p>
+  </div>
+</section>
+
+<section class="s-office-photos">
+  <div class="container container--sm">
+    <div class="photos-grid">
+
+      <!-- first office image -->
+      <div class="photos-grid__item big">
+        <div class="photos-grid__item--photo">
+          <picture>
+
+            {{ range $.Site.Data.en.office_page.first_office_block_images }}
+              <source data-srcset="{{ .no_retina_image}} 1x, {{ .retina_image }} 2x" media="(min-width: {{ .size }})" />
+            {{end}}
+
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+              data-src="{{ $.Site.Data.en.office_page.default_first_office_image }}" class="card-bg lazyload"
+              alt="office image" />
+
+          </picture>
+        </div>
+        <div class="photos-grid__item--caption">
+          <h4 class="h4">{{ $.Site.Data.en.office_page.first_office_image_title }}</h4>
+          <p>{{ $.Site.Data.en.office_page.first_office_image_description }}</p>
+        </div>
+      </div>
+      <!-- first office image end -->
+
+      <!-- second office image -->
+      <div class="photos-grid__item">
+          <div class="photos-grid__item--photo">
+            <picture>
+  
+              {{ range $.Site.Data.en.office_page.second_office_block_images }}
+                <source data-srcset="{{ .no_retina_image}} 1x, {{ .retina_image }} 2x" media="(min-width: {{ .size }})" />
+              {{end}}
+  
+              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                data-src="{{ $.Site.Data.en.office_page.default_second_office_image }}" class="card-bg lazyload"
+                alt="office image" />
+  
+            </picture>
+          </div>
+          <div class="photos-grid__item--caption">
+            <h4 class="h4">{{ $.Site.Data.en.office_page.second_office_image_title }}</h4>
+            <p>{{ $.Site.Data.en.office_page.second_office_image_description }}</p>
+          </div>
+        </div>
+        <!-- second office image end -->
+
+        <!-- third office image -->
+        <div class="photos-grid__item">
+          <div class="photos-grid__item--photo">
+            <picture>
+  
+              {{ range $.Site.Data.en.office_page.third_office_block_images }}
+                <source data-srcset="{{ .no_retina_image}} 1x, {{ .retina_image }} 2x" media="(min-width: {{ .size }})" />
+              {{end}}
+  
+              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                data-src="{{ $.Site.Data.en.office_page.default_third_office_image }}" class="card-bg lazyload"
+                alt="office image" />
+  
+            </picture>
+          </div>
+          <div class="photos-grid__item--caption">
+            <h4 class="h4">{{ $.Site.Data.en.office_page.third_office_image_title }}</h4>
+            <p>{{ $.Site.Data.en.office_page.third_office_image_description }}</p>
+          </div>
+        </div>
+        <!-- third office image end -->
+
+        <!-- fourth office image -->
+        <div class="photos-grid__item">
+            <div class="photos-grid__item--photo">
+              <picture>
+    
+                {{ range $.Site.Data.en.office_page.fourth_office_block_images }}
+                  <source data-srcset="{{ .no_retina_image}} 1x, {{ .retina_image }} 2x" media="(min-width: {{ .size }})" />
+                {{end}}
+    
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                  data-src="{{ $.Site.Data.en.office_page.default_fourth_office_image }}" class="card-bg lazyload"
+                  alt="office image" />
+    
+              </picture>
+            </div>
+            <div class="photos-grid__item--caption">
+              <h4 class="h4">{{ $.Site.Data.en.office_page.fourth_office_image_title }}</h4>
+              <p>{{ $.Site.Data.en.office_page.fourth_office_image_description }}</p>
+            </div>
+          </div>
+          <!-- fourth office image end -->
+
+          <!-- fifth office image -->
+          <div class="photos-grid__item">
+            <div class="photos-grid__item--photo">
+              <picture>
+    
+                {{ range $.Site.Data.en.office_page.fifth_office_block_images }}
+                  <source data-srcset="{{ .no_retina_image}} 1x, {{ .retina_image }} 2x" media="(min-width: {{ .size }})" />
+                {{end}}
+    
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                  data-src="{{ $.Site.Data.en.office_page.default_fifth_office_image }}" class="card-bg lazyload"
+                  alt="office image" />
+    
+              </picture>
+            </div>
+            <div class="photos-grid__item--caption">
+              <h4 class="h4">{{ $.Site.Data.en.office_page.fifth_office_image_title }}</h4>
+              <p>{{ $.Site.Data.en.office_page.fifth_office_image_description }}</p>
+            </div>
+          </div>
+          <!-- fifth office image end -->
+
+    </div>
+  </div>
+</section>
+
+<section class="s-carousel">
+  <div class="container container--sm">
+    <p class="caption caption--preline">{{ i18n "more_photos" }}</p>
+  </div>
+
+  <div class="slider-for">
+
+    {{ range .Site.Data.en.office_page.office_page_slides }}
+
+      <picture>
+
+          {{ range .slide }}
+
+            {{ range .slide_content}}
+              <source data-srcset="{{ .no_retina_image}} 1x, {{ .retina_image }} 2x" media="(min-width: {{ .size }})" />
+            {{ end }}
+            
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+               data-src="{{ .default_slide_image }}" class="card-bg lazyload"
+               alt="office image" />
+          {{ end }}
+
+      </picture>
+
+    {{ end }}
+
+  </div>
+
+  <div class="slider-nav">
+
+    {{ range .Site.Data.en.office_page.office_page_slides }}
+
+    <div>
+      <picture>
+
+          {{ range .slide }}
+            
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+               data-src="{{ .default_slide_image }}" class="card-bg lazyload"
+               alt="project image" />
+               
+          {{ end }}
+
+      </picture>
+    </div>
+
+    {{ end }}
+
+  </div>
+
+</section>
+
+<section class="s-map">
+  <div class="container container--sm">
+    <p class="caption caption--preline">{{ .Params.location_title }}</p>
+    <p class="caption--desctiption">{{ .Params.location_description }}</p>
+    <div id="map"></div>
+  </div>
+</section>
+
+{{ end }}

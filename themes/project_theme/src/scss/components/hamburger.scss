@@ -1,0 +1,41 @@
+.hamburger {
+  @include square(60px);
+  @include mobileVisible('tablet-lg');
+  position: relative;
+  z-index: z('hight');
+  cursor: pointer;
+  &.opened {
+    background: #fff;
+  }
+  &__item {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 2px;
+    width: 30px;
+    background: #000;
+    border-radius: 8px;
+    transition: all $animation-time ease-in-out;
+    &:nth-child(1) {
+      top: 30px;
+      .opened & {
+        transform: rotate(45deg);
+        top: 32px;
+      }
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+      top: 24px;
+      .opened & { width: 0; }
+    }
+    &:nth-child(4) {
+      top: 37px;
+      .opened & {
+        transform: rotate(-45deg);
+        top: 32px;
+      }
+    }
+  }
+}
