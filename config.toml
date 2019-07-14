@@ -1,6 +1,6 @@
 baseURL = "http://example.org/"
 languageCode = "ru-ru"
-theme = "two-brothers"
+theme = "two-brothers-theme"
 
 [taxonomies]
   category = "category"
