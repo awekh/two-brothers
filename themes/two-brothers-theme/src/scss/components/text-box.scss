@@ -1,0 +1,33 @@
+.text-box {
+	background: rgba(#222, .8);
+	padding: 15px;
+	color: #f2f2f2;
+	text-transform: uppercase;
+	font-size: 32px;
+	line-height: 1.24em;
+	position: absolute;
+	z-index: 10;
+	top: 15px;
+	left: 50%;
+	transform: translateX(-50%);
+	max-width: 600px;
+	width: 100%;
+	text-align: center;
+}
+
+.typography-box {
+	max-width: 600px;
+	width: 100%;
+	margin: 0 auto;
+	hr {
+		margin: 30px auto;
+		border: 2px dashed #000;
+		width: 50%;
+	}
+	strong {
+		font-size: 20px;
+		display: block;
+		margin-bottom: 15px;
+		text-decoration: underline;
+	}
+}

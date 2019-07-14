@@ -1,6 +1,0 @@
-{{ $vendor := resources.Get "js/vendor.min.js"| minify }}
-<script type="text/javascript" src="{{ $vendor.Permalink }}" defer></script>
-
-{{ $app := resources.Get "js/app.js"| minify }}
-<script type="text/javascript" src="{{ $app.Permalink }}" defer></script>
-    

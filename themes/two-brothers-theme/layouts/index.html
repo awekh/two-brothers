@@ -1,0 +1,42 @@
+{{ define "main" }}
+{{ $projects := .Site.GetPage "/goods" }}
+{{ with .Params.first_sections }}
+<section class="section section-main">
+    <div class="container">
+        <div class="section-main-row">
+            <div class="section-info">
+                <div class="section-copy">
+                    <span class="caption caption--preline">{{ .name }}</span>
+                    <h2 class="h2">{{ .title }}</h2>
+                    <p class="descr">{{ .description }}</p>
+                </div>
+            </div>
+            <div class="section-media">
+                <a href="/projects/dozens/" class="card-main">
+                    <div class="card-media">
+                        {{ with $.Site.Data.en.home_page }}
+                        <picture>
+                            {{ range $.Site.Data.en.home_page.project_block_image }}
+                            <source data-srcset="{{ .no_retina_image}} 1x, {{ .retina_image }} 2x" media="(min-width: {{ .size }})" />
+                            {{ end }}
+                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{ .default_project_image }}" class="card-bg lazyload" alt="project image" />
+                        </picture>
+                    </div>
+                    <div class="card-copy">
+                        <span class="caption caption--preline">{{ i18n "latest_project" }}</span>
+                        <h2 class="h2">Dozens</h2>
+                    </div>
+                </a>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{end}}
+{{ with .Params.second_section }}
+<section class="section">
+ 
+</section>
+{{ end }}
+
+{{end}}

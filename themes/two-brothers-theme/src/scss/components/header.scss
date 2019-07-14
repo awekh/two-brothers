@@ -1,0 +1,237 @@
+$header-animation-time: 0.5s;
+body.navbar-opened {
+    @include media('<tablet-lg') {
+        overflow: hidden;
+    }
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: background $header-animation-time ease, box-shadow $header-animation-time ease;
+    @include media('<tablet-lg') {
+        background: #fff;
+        &.scrolled {
+            box-shadow: 0 1px 4px 0 #eee;
+        }
+    }
+}
+
+.header-container {
+    @include flex-centering(space-between);
+    position: relative;
+    @include media('<tablet-lg') {
+        padding: 20px;
+    }
+}
+
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px 0 0 10px;
+    background: white;
+    transition: background $header-animation-time ease;
+    @include media('<desktop-intermediate') {
+        left: 30px;
+    }
+    @include media('<tablet-lg') {
+        position: relative;
+        top: 0;
+        left: 0;
+        background: none !important;
+    }
+    &-text {
+        margin-left: 17px;
+        padding-right: 10px;
+        opacity: 1;
+        transition: all $header-animation-time ease;
+        @include media('<tablet-lg') {
+            display: block !important;
+        }
+        @include media('<phone-lg') {
+            margin-left: 10px;
+        }
+        @include media('<phone-md') {
+            display: none !important;
+        }
+        .scrolled & {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+    &.scrolled {
+        background: transparent;
+    }
+}
+
+.navbar-holder {
+    background: #fff;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    opacity: 1;
+    transition: all $header-animation-time ease;
+    @include media('<=desktop-md') {
+        right: 30px;
+    }
+    @include media('<tablet-lg') {
+        align-items: flex-start;
+        right: auto;
+        left: -100%;
+        top: 0;
+        width: 100%;
+        background: #fff;
+        height: 100vh;
+        display: flex;
+        opacity: 0;
+        transition: left opacity .3s ease;
+        &.opened {
+            opacity: 1;
+            z-index: 3;
+            left: 0;
+        }
+        nav {
+            width: 100%;
+            padding-top: 23vh;
+            padding-left: 90px;
+        }
+    }
+    @include media('<=phone-lg') {
+        nav {
+            padding-top: 20vh;
+            padding-left: 20px;
+        }
+    }
+    &.scrolled {
+        opacity: 0;
+        top: 0;
+    }
+}
+
+.close-btn {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 30px;
+    text-align: center;
+    @include media('<tablet-lg') {
+        display: block;
+    }
+}
+
+.navbar {
+    @extend %listreset;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    @include media('<tablet-lg') {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+    &-item {
+        position: relative;
+        margin: 0 15px;
+        @include media('<tablet-lg') {
+            margin: 7px 15px;
+        }
+        .nav-link {
+            font-family: $ff-bold;
+            font-weight: 500;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            position: relative;
+            padding: 10px 0;
+            @include media('<tablet-lg') {
+                font-size: 40px;
+            }
+            @include media('<=phone-lg') {
+                font-size: 32px;
+            }
+            &::before {
+                @include pseudo;
+                background: #000;
+                height: 2px;
+                width: 0;
+                bottom: 0px;
+                transition: width 0.25s;
+            }
+        }
+        &:hover,
+        &--active {
+            .nav-link {
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+        &:hover {
+            @include media('<tablet-lg') {
+                .nav-link {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &:first-of-type {
+            @include media('>=tablet-lg') {
+                display: none;
+            }
+        }
+    }
+}
+
+.menu-toggler {
+    position: absolute;
+    top: 30px;
+    // right: 40px;
+    right: -40px;
+    padding: 14px 11px;
+    background: #222;
+    display: flex;
+    flex-direction: column;
+    outline: none;
+    max-width: 40px;
+    min-width: 40px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.13);
+    opacity: 0;
+    transition: all $header-animation-time ease;
+    @include media('<desktop-intermediate') {
+        right: 30px;
+    }
+    @include media('<tablet-lg') {
+        top: 20px;
+        display: block !important;
+        opacity: 1;
+    }
+    @include media('<=phone-lg') {
+        right: 20px;
+    }
+    span {
+        width: 18px;
+        height: 2px;
+        background: #fff;
+        display: block;
+        &+span {
+            margin-top: 3px;
+        }
+    }
+    &.scrolled {
+        opacity: 1;
+        right: 40px;
+    }
+}

@@ -3,7 +3,7 @@ module.exports = {
     tasks: 'tasks',
     src: 'src',
     build: 'assets',
-    theme: 'project_theme'
+    theme: 'two-brothers-theme'
   },
   file: {
     mainJs: 'app.js',
