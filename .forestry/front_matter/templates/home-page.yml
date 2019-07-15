@@ -22,6 +22,11 @@ fields:
       maxSize: 250
     label: Main section background
   label: main section
+- name: logo
+  type: file
+  config:
+    maxSize: 250
+  label: Logo
 pages:
 - content/_index.md
 - content/home-page.md
