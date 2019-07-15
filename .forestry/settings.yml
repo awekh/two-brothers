@@ -15,7 +15,7 @@ sections:
   create: all
   match: "**/*"
 upload_dir: themes/two-brothers-theme/static/images
-public_path: "/images"
+public_path: "/static/images"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
