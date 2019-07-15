@@ -17,6 +17,19 @@
             </nav>
             <span class="close-btn"><i class="icon-ic_close"></i></span>
         </div>
+        <div class="navbar-holder-secondary">
+            <nav>
+                <ul class="navbar-secondary">
+                    {{ $currentPage := . }}
+                    {{ range .Site.Menus.aside }}
+                    <li class="navbar-item {{ if $currentPage.IsMenuCurrent "aside" . }}navbar-item--active{{ end }}">
+                        <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </nav>
+            <span class="close-btn"><i class="icon-ic_close"></i></span>
+        </div>
         <button class="menu-toggler" aria-label="mobile toggle">
             <span></span>
             <span></span>
