@@ -22,3 +22,5 @@ fields:
       maxSize: 250
     label: Main section background
   label: main section
+pages:
+- content/home-page.md
