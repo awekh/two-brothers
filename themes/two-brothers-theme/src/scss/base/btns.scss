@@ -54,7 +54,6 @@ input[type="button"],
         position: relative;
         transition: all 0.3s ease-in-out;
         text-transform: uppercase;
-        font-family: $ff-bold;
         font-weight: 500;
         &::after {
             content: "\e901";
@@ -71,7 +70,6 @@ input[type="button"],
         content: attr(data-text);
         text-transform: uppercase;
         text-align: left;
-        font-family: $ff-bold;
         font-weight: 500;
         top: 0;
         right: 100%;

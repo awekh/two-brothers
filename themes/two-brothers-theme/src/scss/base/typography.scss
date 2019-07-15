@@ -19,7 +19,6 @@ h6, .h6,
 h1, .h1 {
   font-size: map-get($font-size, 'h1-font-size');
   line-height: map-get($line-height, 'h1-line-height');
-  font-family: $ff-extrabold;
   letter-spacing: 1px;
   
 }
@@ -27,7 +26,6 @@ h1, .h1 {
 h2, .h2 {
   font-size: map-get($font-size, 'h2-font-size');
   line-height: map-get($line-height, 'h2-line-height');
-  font-family: $ff-bold;
   font-weight: 600;
   letter-spacing: 0.5px;
 }
@@ -35,7 +33,6 @@ h2, .h2 {
 h3, .h3 {
   font-size: map-get($font-size, 'h3-font-size');
   line-height: map-get($line-height, 'h3-line-height');
-  font-family: $ff-bold;
   font-weight: 600;
   letter-spacing: 0.5px;
 }
@@ -43,7 +40,6 @@ h3, .h3 {
 h4, .h4 {
   font-size: map-get($font-size, 'h4-font-size');
   line-height: map-get($line-height, 'h4-line-height');
-  font-family: $ff-semibold;
   
 }
 
@@ -85,7 +81,7 @@ ol, ul {
 }
 
 .caption {
-  font: 600 14px/16px $ff-bold;
+  font: 600 14px/16px;
   letter-spacing: 1px;
   text-transform: uppercase;
   display: block;

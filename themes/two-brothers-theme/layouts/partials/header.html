@@ -1,9 +1,5 @@
 <header class="header">
     <div class="header-container">
-        <a href="{{ .Site.Params.mainUrl | absURL }}" class="logo">
-            <img src="{{ .Site.Params.logo_icon | absURL }}" alt="logo-icon" class="logo-icon">
-            <img src="{{ .Site.Params.logo_text | absURL }}" alt="logo-text" class="logo-text">
-        </a>
         <div class="navbar-holder">
             <nav>
                 <ul class="navbar">
@@ -18,6 +14,9 @@
             <span class="close-btn"><i class="icon-ic_close"></i></span>
         </div>
         <div class="navbar-holder-secondary">
+            <a href="{{ .Site.Params.mainUrl | absURL }}" class="logo">
+                <img src="{{ .Site.Params.logo }}" alt="logo-icon" class="logo-icon">
+            </a>
             <nav>
                 <ul class="navbar-secondary">
                     {{ $currentPage := . }}

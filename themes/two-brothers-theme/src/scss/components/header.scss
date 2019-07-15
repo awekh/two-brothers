@@ -21,11 +21,11 @@ body.navbar-opened {
 }
 
 .header-container {
-    @include flex-centering(space-between);
+    @include flex-centering(flex-end);
     position: relative;
-    @include media('<tablet-lg') {
-        padding: 20px;
-    }
+    max-width: 1720px;
+    padding: 20px;
+    margin: auto;
 }
 
 
@@ -45,16 +45,24 @@ body.navbar-opened {
     }
 }
 
+.navbar-holder {
+    &-secondary {
+        position: absolute;
+        left: 0;
+        top: 100px;
+    }
+}
+
 .navbar {
     @extend %listreset;
     display: flex;
-    align-items: center;
-    height: 40px;
+    align-items: flex-end;
     @include media('<tablet-lg') {
         flex-direction: column;
         align-items: flex-start;
         height: auto;
     }
+
     &-item {
         position: relative;
         margin: 0 15px;
@@ -62,7 +70,6 @@ body.navbar-opened {
             margin: 7px 15px;
         }
         .nav-link {
-            font-family: $ff-bold;
             font-weight: 500;
             font-size: 14px;
             letter-spacing: 1px;

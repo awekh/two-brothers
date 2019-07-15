@@ -32,12 +32,10 @@ $line-height: (
 );
 
 $fonts: (
-  'base-sans-serif': unquote("'Proxima Nova', 'Helvetica Neue', Helvetica, sans-serif"),
-  'base-serif': unquote("'Proxima Nova', Times, Baskerville, Georgia, serif"),
+  'base-sans-serif': unquote("'Roboto', sans-serif"),
+  'base-serif': unquote("Montserrat', sans-serif"),
 );
-$ff-extrabold: 'proxima_nova_altblack', 'Helvetica Neue', Helvetica, sans-serif;
-$ff-bold: 'proxima_nova_altbold', 'Helvetica Neue', Helvetica, sans-serif;
-$ff-semibold: 'proxima_nova_ltsemibold', 'Helvetica Neue', Helvetica, sans-serif;
+
 
 $colors: (
   'base': (

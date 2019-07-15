@@ -2,6 +2,7 @@ baseURL = "http://example.org/"
 languageCode = "ru-ru"
 theme = "two-brothers-theme"
 
+
 [taxonomies]
   category = "category"
 
@@ -12,23 +13,19 @@ theme = "two-brothers-theme"
     url = "/"
     weight = 1
   [[menu.main]]
-    parent = "pages"
     identifier = "О нас"
     name = "О нас"
     url = "/about-us/"
     weight = 2
   [[menu.main]]
-    parent = "pages"
     identifier = "Оплата и доставка"
     name = "Оплата и доставка"
     url = "/delivery-and-payment/"
     weight = 3
   [[menu.main]]
-    parent = "pages"
     name = "Контакты"
     url = "/contacts/"
   [[menu.main]]
-    parent = "pages"
     name = "Error 404"
     url = "/404.html/"
 
@@ -38,13 +35,11 @@ theme = "two-brothers-theme"
     url = "/bags"
     weight = 1
   [[menu.aside]]
-    parent = "pages"
     identifier = "Сумки"
     name = "Сумки"
     url = "/bags2/"
     weight = 2
   [[menu.aside]]
-    parent = "pages"
     identifier = "Аксессуары"
     name = "Аксессуары"
     url = "/accessorize/"
@@ -52,3 +47,4 @@ theme = "two-brothers-theme"
 
 [params]
   title = ""
+  logo = "/images/logo.svg"
