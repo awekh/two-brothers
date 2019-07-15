@@ -23,4 +23,5 @@ fields:
     label: Main section background
   label: main section
 pages:
+- content/_index.md
 - content/home-page.md
