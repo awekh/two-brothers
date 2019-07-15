@@ -8,8 +8,8 @@
             <nav>
                 <ul class="navbar">
                     {{ $currentPage := . }}
-                    {{ range .Site.Menus.nav }}
-                    <li class="navbar-item {{ if $currentPage.IsMenuCurrent "nav" . }}navbar-item--active{{ end }}">
+                    {{ range .Site.Menus.main }}
+                    <li class="navbar-item {{ if $currentPage.IsMenuCurrent "main" . }}navbar-item--active{{ end }}">
                         <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
                     </li>
                     {{ end }}
