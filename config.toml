@@ -1,50 +1,37 @@
 baseURL = "http://example.org/"
 languageCode = "ru-ru"
 theme = "two-brothers-theme"
-
-
-[taxonomies]
-  category = "category"
-
-[menu]
-  [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    weight = 1
-  [[menu.main]]
-    identifier = "О нас"
-    name = "О нас"
-    url = "/about-us/"
-    weight = 2
-  [[menu.main]]
-    identifier = "Оплата и доставка"
-    name = "Оплата и доставка"
-    url = "/delivery-and-payment/"
-    weight = 3
-  [[menu.main]]
-    name = "Контакты"
-    url = "/contacts/"
-  [[menu.main]]
-    name = "Error 404"
-    url = "/404.html/"
-
-  [[menu.aside]]
-    identifier = "Рюкзаки"
-    name = "bags"
-    url = "/bags"
-    weight = 1
-  [[menu.aside]]
-    identifier = "Сумки"
-    name = "Сумки"
-    url = "/bags2/"
-    weight = 2
-  [[menu.aside]]
-    identifier = "Аксессуары"
-    name = "Аксессуары"
-    url = "/accessorize/"
-    weight = 3
-
+[[menu.aside]]
+identifier = "Аксессуары"
+name = "Аксессуары"
+url = "/accessorize/"
+weight = 3
+[[menu.aside]]
+identifier = "Сумки"
+name = "Сумки"
+url = "/bags2/"
+weight = 2
+[[menu.aside]]
+identifier = "Рюкзаки"
+name = "Рюкзаки"
+url = "/bags"
+weight = 1
+[[menu.main]]
+name = "Контакты"
+url = "/contacts/"
+weight = 3
+[[menu.main]]
+identifier = "Оплата и доставка"
+name = "Оплата и доставка"
+url = "/delivery-and-payment/"
+weight = 2
+[[menu.main]]
+identifier = "О нас"
+name = "О нас"
+url = "/about-us/"
+weight = 1
 [params]
-  title = ""
-  logo = "/images/logo.svg"
+logo = "/images/logo.svg"
+title = ""
+[taxonomies]
+category = "category"
