@@ -20,7 +20,7 @@ body.navbar-opened {
     }
 }
 
-.header-container {
+.header-container { 
     @include flex-centering(flex-end);
     position: relative;
     max-width: 1720px;
@@ -65,18 +65,17 @@ body.navbar-opened {
 
     &-item {
         position: relative;
-        margin: 0 15px;
         @include media('<tablet-lg') {
-            margin: 7px 15px;
         }
         .nav-link {
-            font-weight: 500;
-            font-size: 14px;
-            letter-spacing: 1px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 180%;
+            color: #fff;
+
+            text-align: right;
             text-transform: uppercase;
-            text-decoration: none;
-            position: relative;
-            padding: 10px 0;
             @include media('<tablet-lg') {
                 font-size: 40px;
             }
