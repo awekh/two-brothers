@@ -1,4 +1,5 @@
 $header-animation-time: 0.5s;
+
 body.navbar-opened {
     @include media('<tablet-lg') {
         overflow: hidden;
@@ -12,15 +13,17 @@ body.navbar-opened {
     right: 0;
     z-index: 1000;
     transition: background $header-animation-time ease, box-shadow $header-animation-time ease;
+
     @include media('<tablet-lg') {
         background: #fff;
+
         &.scrolled {
             box-shadow: 0 1px 4px 0 #eee;
         }
     }
 }
 
-.header-container { 
+.header-container {
     @include flex-centering(flex-end);
     position: relative;
     max-width: 1720px;
@@ -40,6 +43,7 @@ body.navbar-opened {
     line-height: 40px;
     font-size: 30px;
     text-align: center;
+
     @include media('<tablet-lg') {
         display: block;
     }
@@ -48,8 +52,24 @@ body.navbar-opened {
 .navbar-holder {
     &-secondary {
         position: absolute;
-        left: 0;
-        top: 100px;
+        left: 20px;
+        top: 128px;
+
+        .navbar-secondary {
+            @extend %listreset;
+            .navbar-item {
+                &:first-of-type {
+                    @include media('>=tablet-lg') {
+                        display: none;
+                    }
+                }
+
+                .nav-link {
+                    margin-left: 0;
+                    text-transform: capitalize;
+                }
+            }
+        }
     }
 }
 
@@ -57,6 +77,7 @@ body.navbar-opened {
     @extend %listreset;
     display: flex;
     align-items: flex-end;
+
     @include media('<tablet-lg') {
         flex-direction: column;
         align-items: flex-start;
@@ -65,23 +86,27 @@ body.navbar-opened {
 
     &-item {
         position: relative;
-        @include media('<tablet-lg') {
-        }
+
+        @include media('<tablet-lg') {}
+
         .nav-link {
             font-style: normal;
             font-weight: normal;
             font-size: 16px;
             line-height: 180%;
             color: #fff;
-
             text-align: right;
             text-transform: uppercase;
+            margin-left: 24px;
+
             @include media('<tablet-lg') {
                 font-size: 40px;
             }
+
             @include media('<=phone-lg') {
                 font-size: 32px;
             }
+
             &::before {
                 @include pseudo;
                 background: #000;
@@ -91,6 +116,7 @@ body.navbar-opened {
                 transition: width 0.25s;
             }
         }
+
         &:hover,
         &--active {
             .nav-link {
@@ -99,6 +125,7 @@ body.navbar-opened {
                 }
             }
         }
+
         &:hover {
             @include media('<tablet-lg') {
                 .nav-link {
@@ -109,12 +136,12 @@ body.navbar-opened {
             }
         }
 
-        &:first-of-type {
-            @include media('>=tablet-lg') {
-                display: none;
-            }
-        }
     }
+}
+
+.logo {
+    display: block;
+    margin-bottom: 90px;
 }
 
 .menu-toggler {
@@ -132,22 +159,27 @@ body.navbar-opened {
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.13);
     opacity: 0;
     transition: all $header-animation-time ease;
+
     @include media('<desktop-intermediate') {
         right: 30px;
     }
+
     @include media('<tablet-lg') {
         top: 20px;
         display: block !important;
         opacity: 1;
     }
+
     @include media('<=phone-lg') {
         right: 20px;
     }
+
     span {
         width: 18px;
         height: 2px;
         background: #fff;
         display: block;
+
         &+span {
             margin-top: 3px;
         }

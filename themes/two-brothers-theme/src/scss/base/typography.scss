@@ -11,15 +11,13 @@ h6, .h6,
 .h {
   font-family: map-get($fonts, 'base-sans-serif');
   font-weight: bold;
-  margin: 0 0 0.5em;
+  margin: 0;
   color: map-deep-get($colors, 'base', 'black');
-  text-transform: uppercase;
 }
 
 h1, .h1 {
   font-size: map-get($font-size, 'h1-font-size');
   line-height: map-get($line-height, 'h1-line-height');
-  letter-spacing: 1px;
   
 }
 
@@ -27,14 +25,12 @@ h2, .h2 {
   font-size: map-get($font-size, 'h2-font-size');
   line-height: map-get($line-height, 'h2-line-height');
   font-weight: 600;
-  letter-spacing: 0.5px;
 }
 
 h3, .h3 {
   font-size: map-get($font-size, 'h3-font-size');
   line-height: map-get($line-height, 'h3-line-height');
   font-weight: 600;
-  letter-spacing: 0.5px;
 }
 
 h4, .h4 {
@@ -62,7 +58,7 @@ a {
   text-decoration: none;
   &:hover,
   &:focus {
-    text-decoration: none;
+    text-decoration: none; 
   }
 }
 
