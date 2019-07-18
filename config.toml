@@ -7,17 +7,17 @@ url = "/"
 weight = 1
 [[menu.aside]]
 identifier = "Аксессуары"
-name = "Аксессуары"
+name = "Спорт"
 url = "/accessorize/"
 weight = 4
 [[menu.aside]]
 identifier = "Сумки"
-name = "Сумки"
+name = "Кэжуал "
 url = "/bags2/"
 weight = 3
 [[menu.aside]]
 identifier = "Рюкзаки"
-name = "Рюкзаки"
+name = "Бизнес"
 url = "/bags"
 weight = 2
 [[menu.main]]
