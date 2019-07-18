@@ -2,20 +2,24 @@ baseURL = "http://example.org/"
 languageCode = "ru-ru"
 theme = "two-brothers-theme"
 [[menu.aside]]
+name = "Главная"
+url = "/"
+weight = 1
+[[menu.aside]]
 identifier = "Аксессуары"
 name = "Аксессуары"
 url = "/accessorize/"
-weight = 3
+weight = 4
 [[menu.aside]]
 identifier = "Сумки"
 name = "Сумки"
 url = "/bags2/"
-weight = 2
+weight = 3
 [[menu.aside]]
 identifier = "Рюкзаки"
 name = "Рюкзаки"
 url = "/bags"
-weight = 1
+weight = 2
 [[menu.main]]
 name = "Контакты"
 url = "/contacts/"
