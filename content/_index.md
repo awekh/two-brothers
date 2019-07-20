@@ -1,5 +1,8 @@
 +++
 logo = "/images/logo.svg"
+[[home_page_main_blocks.label]]
+image = "/images/Photo 1.jpg"
+label = "Бизнес"
 [main_section]
 main_section_background = "/images/main-bg.jpg"
 subtitle = "Spring Summer 2020"
