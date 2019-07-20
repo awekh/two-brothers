@@ -7,13 +7,12 @@
         </div>
     </section>
 
-    {{ $inverse := true }}
 
     {{ range .Data.Pages }}
 
         <section class="section section-project-list-item">
             <div class="container container--sm">
-                <div class="section-main-row section-project-row  {{ if eq $inverse true }} {{ $inverse = false }} inverse {{ else }} {{ $inverse =  true }} {{ end }}">
+                <div class="section-main-row">
                     <div class="section-info">
                         <div class="section-copy">
                             <span class="caption">{{ .Params.Caption }}</span>
