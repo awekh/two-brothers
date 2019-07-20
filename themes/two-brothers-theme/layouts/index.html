@@ -1,5 +1,4 @@
 {{ define "main" }}
-{{ $projects := .Site.GetPage "/goods" }}
 <section class="section section-main">
     {{ with .Params.main_section }}
     <div class="section-main-row">
@@ -22,5 +21,17 @@
         <div class="section-media" style="background-image: url('{{ .main_section_background }}')"></div>
     </div>
     {{ end }}
+</section>
+
+<section class="section-main-categories">
+  {{ with .Params.home_page_main_blocks }}
+
+    {{ range .category }}
+      <div class="item">
+        <p>{{ .label }}</p>
+        <img src="{{ .image | safeHTML }}" alt="">
+    </div>
+    {{ end }}
+  {{ end }}
 </section>
 {{end}}

@@ -27,6 +27,28 @@ fields:
       maxSize: 250
     label: Main section background
   label: main section
+- name: home_page_main_blocks
+  type: field_group
+  config: {}
+  fields:
+  - name: label
+    type: field_group_list
+    fields:
+    - name: label
+      type: text
+      config:
+        required: false
+      label: Label
+    - name: image
+      type: file
+      config:
+        maxSize: 250
+      label: Image
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Category
+  label: Home page main blocks
 pages:
 - content/_index.md
-- content/home-page.md
