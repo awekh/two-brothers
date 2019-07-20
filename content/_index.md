@@ -1,6 +1,9 @@
 +++
 logo = "/images/logo.svg"
 [[home_page_main_blocks.label]]
+image = "/images/Photo 2.jpg"
+label = "Casual"
+[[home_page_main_blocks.label]]
 image = "/images/Photo 1.jpg"
 label = "Бизнес"
 [main_section]
