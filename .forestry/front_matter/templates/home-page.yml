@@ -32,15 +32,23 @@ fields:
   config: {}
   fields:
   - name: label
-    type: text
+    type: field_group_list
+    fields:
+    - name: label
+      type: text
+      config:
+        required: false
+      label: Label
+    - name: image
+      type: file
+      config:
+        maxSize: 250
+      label: Image
     config:
-      required: false
-    label: Label
-  - name: image
-    type: file
-    config:
-      maxSize: 250
-    label: Image
+      min: 
+      max: 
+      labelField: 
+    label: Category
   label: Home page main blocks
 pages:
 - content/_index.md
