@@ -10,9 +10,10 @@ sections:
   create: all
   match: "*"
 - type: directory
-  path: content/backpacks
+  path: content
   label: Рюкзаки
   create: all
+  match: "*/backpacks/*"
   match: "*/backpacks/"
 - type: directory
   path: content
