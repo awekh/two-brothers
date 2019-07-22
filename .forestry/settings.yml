@@ -13,7 +13,12 @@ sections:
   path: content/backpacks
   label: Рюкзаки
   create: all
-  match: "**/*"
+  match: "*/backpacks/"
+- type: directory
+  path: content
+  label: Контакты
+  create: all
+  match: "*/contacts/*"
 upload_dir: themes/two-brothers-theme/static/images
 public_path: "/images"
 front_matter_path: ''

@@ -38,4 +38,4 @@ weight = 1
 logo = "/images/logo.svg"
 title = ""
 [taxonomies]
-category = "category"
+  category = "categories"
