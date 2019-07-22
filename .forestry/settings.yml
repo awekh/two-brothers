@@ -6,6 +6,11 @@ webhook_url:
 sections:
 - type: directory
   path: content
+  label: Contacts
+  create: all
+  match: "*/contacts/*"
+- type: directory
+  path: content
   label: Pages
   create: all
   match: "*"
