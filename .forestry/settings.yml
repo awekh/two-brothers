@@ -13,7 +13,6 @@ sections:
   path: content
   label: Рюкзаки
   create: all
-  match: "*/backpacks/*"
   match: "*/backpacks/"
 - type: directory
   path: content
