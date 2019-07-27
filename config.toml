@@ -6,17 +6,17 @@ name = "Главная"
 url = "/"
 weight = 1
 [[menu.aside]]
-identifier = "Аксессуары"
+identifier = "Спорт"
 name = "Спорт"
 url = "/accessorize/"
 weight = 4
 [[menu.aside]]
-identifier = "Сумки"
+identifier = "Кэжуал"
 name = "Кэжуал "
 url = "/bags2/"
 weight = 3
 [[menu.aside]]
-identifier = "Рюкзаки"
+identifier = "Бизнес"
 name = "Бизнес"
 url = "/bags"
 weight = 2
