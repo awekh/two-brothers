@@ -40,3 +40,5 @@ fields:
       maxSize: 250
     label: Brand-logo
   label: Brands
+pages:
+- content/о-нас.md
