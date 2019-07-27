@@ -30,7 +30,6 @@ name = "Оплата и доставка"
 url = "/delivery-and-payment/"
 weight = 2
 [[menu.main]]
-identifier = "О нас"
 name = "О нас"
 url = "/about/"
 weight = 1
