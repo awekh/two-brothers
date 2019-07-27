@@ -1,4 +1,42 @@
 ---
 label: About
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: description
+  type: text
+  config:
+    required: false
+  label: Description
+- name: images
+  type: field_group_list
+  fields:
+  - name: image
+    type: file
+    config:
+      maxSize: 250
+    label: Image
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Images
+- name: secondary_description
+  type: text
+  config:
+    required: false
+  label: Secondary description
+- name: brands
+  type: field_group
+  config: {}
+  fields:
+  - name: brand-logo
+    type: file
+    config:
+      maxSize: 250
+    label: Brand-logo
+  label: Brands
