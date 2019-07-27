@@ -34,11 +34,19 @@ fields:
   type: field_group
   config: {}
   fields:
-  - name: brand-logo
-    type: file
+  - name: brand_logo
+    type: field_group_list
+    fields:
+    - name: logo
+      type: file
+      config:
+        maxSize: 250
+      label: Logo
     config:
-      maxSize: 250
-    label: Brand-logo
+      min: 
+      max: 
+      labelField: 
+    label: brand logo
   label: Brands
 pages:
 - content/о-нас.md
