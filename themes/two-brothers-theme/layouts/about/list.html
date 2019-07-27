@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+    {{ range .Data.Pages }}
+        
+        <section class="section">
+            <div class="container">
+                <h2 class="h2">{{ .Title }}</h2>
+                <p class="description">{{ .Description }}</p>
+                <ul class="about-list">
+                    <li>
+                        {{ range .Params.images}}   
+                            <img src="{{ .image }}" alt="">
+                        {{ end }}
+                    </li>
+                </ul>
+                <p class="description">{{ .Params.secondary_description }}</p>
+            </div>
+        </section>
+    
+    {{ end }}
+
+{{ end }}
