@@ -16,6 +16,11 @@ sections:
   match: "*/backpacks/"
 - type: directory
   path: content
+  label: О нас
+  create: all
+  match: "*/about/"
+- type: directory
+  path: content
   label: Контакты
   create: all
   match: "*/contacts/*"
