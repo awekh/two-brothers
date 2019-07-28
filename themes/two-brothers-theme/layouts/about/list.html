@@ -12,15 +12,19 @@
             {{ end }}
         </ul>
         <p class="description">{{ .Params.secondary_description }}</p>
-        {{ with .Params.brands }}
-        {{ .title }}
-        {{ end }}
+
+
+        <h2 class="h2">{{ .Params.section_brands_title }}</h2>
+ 
         <ul class="brand-list">
+            {{ range .Params.brands.brand_logo}}
+
             <li>
-                {{ with .Params.brands}}
-                 <img src="{{ .brand_logo }}" alt="">
-                {{ end }}
+                
+                 <img src="{{ .logo }}" alt="">
+                
             </li>
+            {{ end }}
         </ul>
     </div>
 </section>
