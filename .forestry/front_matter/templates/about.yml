@@ -30,15 +30,15 @@ fields:
   config:
     required: false
   label: Secondary description
+- name: section_brands_title
+  type: text
+  config:
+    required: false
+  label: Section brands title
 - name: brands
   type: field_group
   config: {}
   fields:
-  - name: section_brands_title
-    type: text
-    config:
-      required: false
-    label: Section brands title
   - name: brand_logo
     type: field_group_list
     fields:
