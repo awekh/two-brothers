@@ -34,6 +34,11 @@ fields:
   type: field_group
   config: {}
   fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
   - name: brand_logo
     type: field_group_list
     fields:
@@ -47,11 +52,6 @@ fields:
       max: 
       labelField: 
     label: brand logo
-  - name: title
-    type: text
-    config:
-      required: false
-    label: Title
   label: Brands
 pages:
 - content/about.md
