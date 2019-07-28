@@ -1,31 +1,28 @@
 {{ define "main" }}
-
-    {{ range .Data.Pages }}
-        
-        <section class="section section-about">
-            <div class="container">
-                <h2 class="h2">{{ .Title }}</h2>
-                <p class="description">{{ .Description }}</p>
-                <ul class="about-list main-list">
-                    {{ range .Params.images}} 
-                        <li>
-                          
-                            <img src="{{ .image }}" alt="">
-                        
-                        </li>
-                    {{ end }}
-                </ul>
-                <p class="description">{{ .Params.secondary_description }}</p>
-                <ul class="brand-list">
-                    <li>
-                        {{ range .Params.brands.brand_logo}}   
-                            <img src="{{ .logo }}" alt="">
-                        {{ end }}
-                    </li>
-                </ul>
-            </div>
-        </section>
-    
-    {{ end }}
-
+{{ range .Data.Pages }}
+<section class="section section-about">
+    <div class="container">
+        <h2 class="h2">{{ .Title }}</h2>
+        <p class="description">{{ .Description }}</p>
+        <ul class="about-list main-list">
+            {{ range .Params.images}}
+            <li>
+                <img src="{{ .image }}" alt="">
+            </li>
+            {{ end }}
+        </ul>
+        <p class="description">{{ .Params.secondary_description }}</p>
+        {{ with .Params.brands }}
+        {{ .title }}
+        {{ end }}
+        <ul class="brand-list">
+            <li>
+                {{ with .Params.brands}}
+                 <img src="{{ .brand_logo }}" alt="">
+                {{ end }}
+            </li>
+        </ul>
+    </div>
+</section>
+{{ end }}
 {{ end }}
