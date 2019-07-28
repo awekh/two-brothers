@@ -47,6 +47,11 @@ fields:
       max: 
       labelField: 
     label: brand logo
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
   label: Brands
 pages:
 - content/about.md
