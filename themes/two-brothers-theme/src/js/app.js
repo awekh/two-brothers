@@ -4,7 +4,6 @@
 // Feel free with using ES6 here.
 
 // import {NAME} from './modules/...';
-import slider from './modules/slider';
 // import mapApi from './modules/map';
 import modalWindow from './modules/modal';
 import tabs from './modules/vacancyTab';
@@ -18,7 +17,6 @@ import navbar from './modules/navbar';
   // When DOM is ready
   $(() => {
     preloader.initPreloader();
-    slider.officeGallery();
     jqValidator.checkForm();
     modalWindow.applyYourCV();
     tabs.careerTabs();
