@@ -70,6 +70,24 @@
             // padding-bottom: 100%;
             position: relative;
 
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: rgba(0,0,0, 0.3);
+                transition: opacity 0.25s;
+                cursor: pointer;
+            }
+
+            &:hover {
+                &:after {
+                    opacity: 0;
+                }
+            }
+
             .label {
                 position: absolute;
                 top: 50%;

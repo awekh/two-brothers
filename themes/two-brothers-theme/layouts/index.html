@@ -24,14 +24,15 @@
 </section>
 
 <section class="section-main-categories">
-  {{ with .Params.home_page_main_blocks }}
 
-    {{ range .category }}
-      <div class="item">
-        <p>{{ .label }}</p>
-        <img src="{{ .image | safeHTML }}" alt="">
-    </div>
+  
+
+    {{ range $name, $taxonomy := $.Site.Taxonomies.backpacks }}
+    {{.}}
+
     {{ end }}
-  {{ end }}
+      
+
+
 </section>
 {{end}}
