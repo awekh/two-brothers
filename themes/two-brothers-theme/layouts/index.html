@@ -24,14 +24,21 @@
 </section>
 
 <section class="section-main-categories">
-  {{ with .Params.home_page_main_blocks }}
 
-    {{ range .category }}
-      <div class="item">
-        <p>{{ .label }}</p>
-        <img src="{{ .image | safeHTML }}" alt="">
-    </div>
+  
+
+    {{ range $name, $taxonomy := $.Site.Taxonomies.backpacks }}
+    {{.}}
+        <a href="/categories/{{ $name | urlize }}" class="item">{{ $name }}>
+
+
+          <p>{{ .label }}</p>
+          <img src="{{ .image | safeHTML }}" alt="">
+
+    </a>
     {{ end }}
-  {{ end }}
+      
+
+
 </section>
 {{end}}

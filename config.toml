@@ -8,17 +8,17 @@ weight = 1
 [[menu.aside]]
 identifier = "Спорт"
 name = "Спорт"
-url = "/accessorize/"
+url = "/sport/"
 weight = 4
 [[menu.aside]]
 identifier = "Кэжуал"
 name = "Кэжуал "
-url = "/bags2/"
+url = "/casual/"
 weight = 3
 [[menu.aside]]
 identifier = "Бизнес"
 name = "Бизнес"
-url = "/bags"
+url = "/business/"
 weight = 2
 [[menu.main]]
 name = "Контакты"
@@ -37,4 +37,4 @@ weight = 1
 logo = "/images/logo.svg"
 title = ""
 [taxonomies]
-  category = "categories"
+  category = "backpacks"
