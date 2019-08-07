@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
+{{ $pageId := "" }}
+
+    {{ if .IsHome }}
+        {{ $pageId = "home-page" }}
+    {{ else }}
+        {{ $pageId = "" }}
+    {{ end }}
+
 {{ partial "head.html" . }}
 
-<body>
+<body id="{{ $pageId }}">
 
     <div id="wrapper">
 
