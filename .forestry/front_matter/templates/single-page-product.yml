@@ -51,7 +51,7 @@ fields:
       path: 
   label: Category
 pages:
-- content/./backpacks/Casual/casual-test-product-1.md
-- content/./backpacks/Casual/casual-test-product.md
 - content/./backpacks/Business/business-test-product-1.md
 - content/./backpacks/Business/business-test-product.md
+- content/./backpacks/Casual/casual-test-product-1.md
+- content/./backpacks/Casual/casual-test-product.md
