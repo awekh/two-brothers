@@ -35,6 +35,21 @@ fields:
     max: 
     labelField: 
   label: Description block
+- name: category
+  type: select
+  default: business
+  config:
+    required: true
+    options:
+    - sport
+    - casual
+    - business
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Category
 pages:
 - content/./backpacks/Casual/casual-test-product-1.md
 - content/./backpacks/Casual/casual-test-product.md
