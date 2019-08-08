@@ -94,7 +94,7 @@ body.navbar-opened {
             font-weight: normal;
             font-size: 16px;
             line-height: 180%;
-            color: #fff;
+            color:  #808080;
             text-align: right;
             text-transform: uppercase;
             margin-left: 24px;
@@ -184,4 +184,14 @@ body.navbar-opened {
             margin-top: 3px;
         }
     }
+}
+
+#home-page {
+
+        .navbar-item {
+            .nav-link {
+                color: #fff;
+            }
+        }
+    
 }

@@ -29,13 +29,7 @@
 
     {{ range $name, $taxonomy := $.Site.Taxonomies.category }}
     {{.}}
-        <a href="/categories/{{ $name | urlize }}" class="item">{{ $name }}>
 
-
-          <p>{{ .label }}</p>
-          <img src="{{ .image | safeHTML }}" alt="">
-
-    </a>
     {{ end }}
       
 
