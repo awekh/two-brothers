@@ -1,159 +1,187 @@
-# Starter Kit for Hugo Framework with Gulp
+![Hugo](https://raw.githubusercontent.com/gohugoio/hugoDocs/master/static/img/hugo-logo.png)
 
-## Quickstart & Prerequisites
+A Fast and Flexible Static Site Generator built with love by [bep](https://github.com/bep), [spf13](http://spf13.com/) and [friends](https://github.com/gohugoio/hugo/graphs/contributors) in [Go][].
 
-### [Hugo](https://gohugo.io/)
+[Website](https://gohugo.io) |
+[Forum](https://discourse.gohugo.io) |
+[Documentation](https://gohugo.io/getting-started/) |
+[Installation Guide](https://gohugo.io/getting-started/installing/) |
+[Contribution Guide](CONTRIBUTING.md) |
+[Twitter](https://twitter.com/gohugoio)
 
-If you are on macOS and using Homebrew, you can install Hugo with the following one-liner:
+[![GoDoc](https://godoc.org/github.com/gohugoio/hugo?status.svg)](https://godoc.org/github.com/gohugoio/hugo)
+[![Linux and macOS Build Status](https://api.travis-ci.org/gohugoio/hugo.svg?branch=master&label=Windows+and+Linux+and+macOS+build "Windows, Linux and macOS Build Status")](https://travis-ci.org/gohugoio/hugo)
+[![Go Report Card](https://goreportcard.com/badge/github.com/gohugoio/hugo)](https://goreportcard.com/report/github.com/gohugoio/hugo)
 
-````
-$ brew install hugo
-````
+## Overview
 
-For more detailed explanations, read the installation guides that follow for [installing on macOS and Windows](https://gohugo.io/getting-started/installing/).
+Hugo is a static HTML and CSS website generator written in [Go][].
+It is optimized for speed, ease of use, and configurability.
+Hugo takes a directory with content and templates and renders them into a full HTML website.
 
-### [Node.js](https://nodejs.org)
+Hugo relies on Markdown files with front matter for metadata, and you can run Hugo from any directory.
+This works well for shared hosts and other systems where you don’t have a privileged account.
 
-Bring up a terminal and type `$ node -v`.
-Node should respond with a version at or above 6.0.x.
-If you need to install Node, go to [nodejs.org](https://nodejs.org) and click on the big green Install button.
+Hugo renders a typical website of moderate size in a fraction of a second.
+A good rule of thumb is that each piece of content renders in around 1 millisecond.
 
-### [Gulp](http://gulpjs.com)
+Hugo is designed to work well for any kind of website including blogs, tumbles, and docs.
 
-Bring up a terminal and type `$ gulp -v`.
-If Gulp is installed it should return a version number at or above 4.0.x.
-If you need to install/upgrade Gulp, open up a terminal and type in the following:
+#### Supported Architectures
 
-````
-$ npm install -g gulp
-````
+Currently, we provide pre-built Hugo binaries for Windows, Linux, FreeBSD, NetBSD, macOS (Darwin), and [Android](https://gist.github.com/bep/a0d8a26cf6b4f8bc992729b8e50b480b) for x64, i386 and ARM architectures.
 
-*This will install Gulp globally. Depending on your user account, you may need to [configure your system](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md) to install packages globally without administrative privileges.*
+Hugo may also be compiled from source wherever the Go compiler tool chain can run, e.g. for other operating systems including DragonFly BSD, OpenBSD, Plan 9, and Solaris.
 
-### Local dependencies
+**Complete documentation is available at [Hugo Documentation](https://gohugo.io/getting-started/).**
 
-Next, install the local dependencies Starter Kit requires:
+## Choose How to Install
 
-````
-$ npm install
-````
+If you want to use Hugo as your site generator, simply install the Hugo binaries.
+The Hugo binaries have no external dependencies.
 
-That's it! You should now have everything needed to use the Starter Kit.
+To contribute to the Hugo source code or documentation, you should [fork the Hugo GitHub project](https://github.com/gohugoio/hugo#fork-destination-box) and clone it to your local machine.
 
-## Build
+Finally, you can install the Hugo source code with `go`, build the binaries yourself, and run Hugo that way.
+Building the binaries is an easy task for an experienced `go` getter.
 
-You must work with the source files in the **"src"** folder, using the collector, source files are compiled into **"assets"** folder.
+### Install Hugo as Your Site Generator (Binary Install)
 
-To compile SASS and JS, build Hugo and start watching for changes use for source files:
+Use the [installation instructions in the Hugo documentation](https://gohugo.io/getting-started/installing/).
 
-````
-$ gulp
-````
+### Build and Install the Binaries from Source (Advanced Install)
 
-To run Hugo server and start watching for changes:
+#### Prerequisite Tools
 
-````
-$ hugo server -D -w
-````
+* [Git](https://git-scm.com/)
+* [Go (at least Go 1.11)](https://golang.org/dl/)
 
-**-D** - include content marked as draft
-**-w** - watch filesystem for changes and recreate as needed
+#### Fetch from GitHub
 
-If you want to **change the name of your theme**, you need to make changes to
+Since Hugo 0.48, Hugo uses the Go Modules support built into Go 1.11 to build. The easiest is to clone Hugo in a directory outside of `GOPATH`, as in the following example:
 
-````
-gulp-config.js -> theme
-````
-
-## Project Structure
-
-````
-
-├── archetypes        #You can create new content files in Hugo using the `hugo new` command
-├── content           #All content for your website will live inside this directory.
-├── data              #This directory is used to store configuration files
-├── tasks             #Folder with tasks for gulpfile
-├── themes            #Folder with Hugo theme
-├── config.toml       #Hugo ships with a large number of configuration directives
-├── gulp-config.js    #Config for gulp
-├── gulpfile.js       #File with gulp tasks
-├── LICENSE
-├── package.json      #File with dependencies
-└── README.md
-
-````
-
-## Theme Structure
-
+```bash
+mkdir $HOME/src
+cd $HOME/src
+git clone https://github.com/gohugoio/hugo.git
+cd hugo
+go install
 ```
 
-├── assets          #Folder with JS and CSS files after compiling
-├── layouts         #Stores templates in the form of .html files
-├── src             #Folder with sources
-└── static          #Stores all the static content: images, CSS, JavaScript, etc.
+**If you are a Windows user, substitute the `$HOME` environment variable above with `%USERPROFILE%`.**
+	
+## The Hugo Documentation
 
+The Hugo documentation now lives in its own repository, see https://github.com/gohugoio/hugoDocs. But we do keep a version of that documentation as a `git subtree` in this repository. To build the sub folder `/docs` as a Hugo site, you need to clone this repo:
+
+```bash
+git clone git@github.com:gohugoio/hugo.git
 ```
+## Contributing to Hugo
 
-## SRC folder structure
+For a complete guide to contributing to Hugo, see the [Contribution Guide](CONTRIBUTING.md).
 
-```
+We welcome contributions to Hugo of any kind including documentation, themes,
+organization, tutorials, blog posts, bug reports, issues, feature requests,
+feature implementations, pull requests, answering questions on the forum,
+helping to manage issues, etc.
 
-├── js                          #Folder for storing js files
-   ├── modules                  #Folder for storing js modules
-   ├── app.js                   #Main js file
-├── scss
-   ├── abstracts                #Folder for storing scss files
-      ├── _main_.scss           #Main scss file for abstracts
-      ├── functions.scss        #Sass functions
-      ├── helpers.scss          #Sass helpers
-      ├── mixins.scss           #Sass mixins
-      ├── variables.scss        #Sass variables that we can use in our scss files
-   ├── base                     #Folder for storing base styles
-      ├── _main.scss            #Main scss file for base styles      
-      ├── forms.scss            #Sass styles for forms      
-      ├── reset.scss            #Sass reset
-      ├── typography.scss       #Sass styles for text      
-   ├── components               #Global Reusable Presentational Components
-   ├── layout                   #Global layout
-   ├── pages                    #Global styles for pages
-   ├── style.scss               #Main scss file (can be used for importing another files)
-├── vendor_entries              #Folder for vendor entries(plugins)
-  ├── vendor.js                 #File for plugins js 
-  ├── vendor.scss               #File for plugins styles
+The Hugo community and maintainers are [very active](https://github.com/gohugoio/hugo/pulse/monthly) and helpful, and the project benefits greatly from this activity.
 
-```
+### Asking Support Questions
 
-Use `vendor_entries` to include plugins into your project.
+We have an active [discussion forum](https://discourse.gohugo.io) where users and developers can ask questions.
+Please don't use the GitHub issue tracker to ask questions.
 
-## JS
+### Reporting Issues
 
-You can use ES2015(ES6). ES2015 isn't introducing anything other than improvements to the JavaScript language and a few new features. 
+If you believe you have found a defect in Hugo or its documentation, use
+the GitHub issue tracker to report the problem to the Hugo maintainers.
+If you're not sure if it's a bug or not, start by asking in the [discussion forum](https://discourse.gohugo.io).
+When reporting the issue, please provide the version of Hugo in use (`hugo version`).
 
-It is not an alternative syntax or language like CoffeeScript or TypeScript. It's good ol' fashioned JavaScript. The reason so many people are excited is that this version introduces a lot of much-needed improvements to the language. 
+### Submitting Patches
 
-* All custom **javascript** files are located in `js/` folder;
-* Entry point for javascript is `src/js/app.js` you can **import** all your *.js* files from here using [ES6 import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) feature;
-* All javascript is **babelified** so yes! You can use all kind of [ES6 features](https://babeljs.io/docs/learn-es2015/) here.
-* All **extensions** must be installed by the [NPM](https://docs.npmjs.com/cli/install);
-* After installing the extension you must **include its files**:
-* **js files** must be included in `src/vendor_entries/vendor.js` by adding new elements to the **array**.
+The Hugo project welcomes all contributors and contributions regardless of skill or experience level.
+If you are interested in helping with the project, we will help you with your contribution.
+Hugo is a very active project with many contributions happening daily.
 
-JavaScript code linting is done using esLint - a linter tool for identifying and reporting on patterns in JavaScript (used [airbnb-base rules](https://www.npmjs.com/package/eslint-config-airbnb-base)).
+Because we want to create the best possible product for our users and the best contribution experience for our developers,
+we have a set of guidelines which ensure that all contributions are acceptable.
+The guidelines are not intended as a filter or barrier to participation.
+If you are unfamiliar with the contribution process, the Hugo team will help you and teach you how to bring your contribution in accordance with the guidelines.
 
-## SCSS
+For a complete guide to contributing code to Hugo, see the [Contribution Guide](CONTRIBUTING.md).
 
-You can use [SASS](http://sass-lang.com/). Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
+[![Analytics](https://ga-beacon.appspot.com/UA-7131036-6/hugo/readme)](https://github.com/igrigorik/ga-beacon)
 
-Sass is a CSS preprocessor — a layer between the stylesheets you author and the .css files you serve to the browser. Sass (short for Syntactically Awesome Stylesheets) plugs the holes in CSS as a language, allowing you to write DRY code that’ll be faster, more efficient, and easier to maintain. This Starter Kit is following Sass [guidelines](https://sass-guidelin.es/#architecture).
+[Go]: https://golang.org/
+[Hugo Documentation]: https://gohugo.io/overview/introduction/
 
-So while normal CSS doesn’t yet allow things like variables, mixins (reusable blocks of styles), and other goodies, Sass provides a syntax that does all of that and more—enabling “super functionality” in addition to your normal CSS.  
+## Dependencies
 
-* All custom **scss** files locate in `src/scss/` folder;
-* Entry point for all scss is `src/scss/style.scss` you can **import** all your *.scss* files from here;
-* You **don't need** to write **prefixes** for different browsers like `-webkit` it will be done by the gulp.
+Hugo stands on the shoulder of many great open source libraries, in lexical order:
 
-The `src` directory above contains MDL's Sass files and the JavaScript sources for all MDL components.
+ | Dependency  | License |
+ | :------------- | :------------- |
+ | [github.com/BurntSushi/locker](https://github.com/BurntSushi/locker) | The Unlicense |
+ | [github.com/BurntSushi/toml](https://github.com/BurntSushi/toml) | MIT License |
+ | [github.com/PuerkitoBio/purell](https://github.com/PuerkitoBio/purell) | BSD 3-Clause "New" or "Revised" License |
+ | [github.com/PuerkitoBio/urlesc](https://github.com/PuerkitoBio/urlesc) | BSD 3-Clause "New" or "Revised" License |
+ | [github.com/alecthomas/chroma](https://github.com/alecthomas/chroma) |  MIT License |
+ | [github.com/bep/debounce](https://github.com/bep/debounce) |    MIT License |
+ | [github.com/bep/gitmap](https://github.com/bep/gitmap) |  MIT License |
+ | [github.com/bep/go-tocss](https://github.com/bep/go-tocss) | MIT License |
+ | [github.com/niklasfasching/go-org](https://github.com/niklasfasching/go-org) | MIT License |
+ | [github.com/cpuguy83/go-md2man](https://github.com/cpuguy83/go-md2man) | MIT License |
+ | [github.com/danwakefield/fnmatch](https://github.com/danwakefield/fnmatch) | BSD 2-Clause "Simplified" License |
+ | [github.com/disintegration/imaging](https://github.com/disintegration/imaging) |  MIT License |
+ | [github.com/dlclark/regexp2](https://github.com/dlclark/regexp2) | MIT License |
+ | [github.com/eknkc/amber](https://github.com/eknkc/amber) | MIT License |
+ | [github.com/fsnotify/fsnotify](https://github.com/fsnotify/fsnotify) |  BSD 3-Clause "New" or "Revised" License |
+ | [github.com/gobwas/glob](https://github.com/gobwas/glob) | MIT License |
+ | [github.com/gorilla/websocket](https://github.com/gorilla/websocket) |  BSD 2-Clause "Simplified" License |
+ | [github.com/hashicorp/go-immutable-radix](https://github.com/hashicorp/go-immutable-radix) | Mozilla Public License 2.0 |
+ | [github.com/hashicorp/golang-lru](https://github.com/hashicorp/golang-lru) | Mozilla Public License 2.0 |
+ | [github.com/hashicorp/hcl](https://github.com/hashicorp/hcl) |   Mozilla Public License 2.0 |
+ | [github.com/jdkato/prose](https://github.com/jdkato/prose) |    MIT License |
+ | [github.com/kyokomi/emoji](https://github.com/kyokomi/emoji) |   MIT License |
+ | [github.com/magiconair/properties](https://github.com/magiconair/properties) | BSD 2-Clause "Simplified" License |
+ | [github.com/markbates/inflect](https://github.com/markbates/inflect) |  MIT License |
+ | [github.com/mattn/go-isatty](https://github.com/mattn/go-isatty) | MIT License |
+ | [github.com/mattn/go-runewidth](https://github.com/mattn/go-runewidth) | MIT License |
+ | [github.com/miekg/mmark](https://github.com/miekg/mmark) | Simplified BSD License |
+ | [github.com/mitchellh/hashstructure](https://github.com/mitchellh/hashstructure) | MIT License |
+ | [github.com/mitchellh/mapstructure](https://github.com/mitchellh/mapstructure) | MIT License |
+ | [github.com/muesli/smartcrop](https://github.com/muesli/smartcrop) |   MIT License |
+ | [github.com/nicksnyder/go-i18n](https://github.com/nicksnyder/go-i18n) | MIT License |
+ | [github.com/olekukonko/tablewriter](https://github.com/olekukonko/tablewriter) | MIT License |
+ | [github.com/pelletier/go-toml](https://github.com/pelletier/go-toml) |  MIT License |
+ | [github.com/pkg/errors](https://github.com/pkg/errors) |  BSD 2-Clause "Simplified" License |
+ | [github.com/russross/blackfriday](https://github.com/russross/blackfriday)  | Simplified BSD License |
+ | [github.com/shurcooL/sanitized_anchor_name](https://github.com/shurcooL/sanitized_anchor_name) | MIT License |
+ | [github.com/spf13/afero](https://github.com/spf13/afero) | Apache License 2.0 |
+ | [github.com/spf13/cast](https://github.com/spf13/cast) |  MIT License |
+ | [github.com/spf13/cobra](https://github.com/spf13/cobra) | Apache License 2.0 |
+ | [github.com/spf13/fsync](https://github.com/spf13/fsync) | MIT License |
+ | [github.com/spf13/jwalterweatherman](https://github.com/spf13/jwalterweatherman) | MIT License |
+ | [github.com/spf13/nitro](https://github.com/spf13/nitro) | Apache License 2.0 |
+ | [github.com/spf13/pflag](https://github.com/spf13/pflag) | BSD 3-Clause "New" or "Revised" License |
+ | [github.com/spf13/viper](https://github.com/spf13/viper) | MIT License |
+ | [github.com/tdewolff/minify](https://github.com/tdewolff/minify) | MIT License |
+ | [github.com/tdewolff/parse](https://github.com/tdewolff/parse) | MIT License |
+ | [github.com/wellington/go-libsass](https://github.com/wellington/go-libsass) | Apache License 2.0 |
+ | [github.com/yosssi/ace](https://github.com/yosssi/ace) |  MIT License |
+ | [golang.org/x/image](https://golang.org/x/image) | BSD 3-Clause "New" or "Revised" License |
+ | [golang.org/x/net](https://golang.org/x/net) | BSD 3-Clause "New" or "Revised" License |
+ | [golang.org/x/sync](https://golang.org/x/sync) | BSD 3-Clause "New" or "Revised" License |
+ | [golang.org/x/sys](https://golang.org/x/sys) | BSD 3-Clause "New" or "Revised" License |
+ | [golang.org/x/text](https://golang.org/x/text) | BSD 3-Clause "New" or "Revised" License
+ | [gopkg.in/yaml.v2](https://gopkg.in/yaml.v2) |    Apache License 2.0 |
 
-* All **extensions** must be installed by the [NPM](https://docs.npmjs.com/cli/install);
-* After installing the extension you must **include its files**:
-* **css or sass files** must be included in `src/vendor_entries/vendor.scss` using `@import`.
+  
+ 
+  
+ 
+ 
+ 

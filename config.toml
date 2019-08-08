@@ -1,6 +1,5 @@
 baseURL = "http://example.org/"
 languageCode = "ru-ru"
-theme = "two-brothers-theme"
 [[menu.aside]]
 name = "Главная"
 url = "/"
