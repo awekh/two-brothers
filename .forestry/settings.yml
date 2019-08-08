@@ -6,9 +6,9 @@ webhook_url:
 sections:
 - type: directory
   path: content
-  label: Backpacks
+  label: Categories
   create: all
-  match: "*/backpacks/*"
+  match: "*/categories/*"
 - type: directory
   path: content
   label: Pages
@@ -16,9 +16,9 @@ sections:
   match: "*"
 - type: directory
   path: content
-  label: about
+  label: О нас
   create: all
-  match: "*/about/"
+  match: "*/about/*"
 - type: directory
   path: content
   label: Контакты

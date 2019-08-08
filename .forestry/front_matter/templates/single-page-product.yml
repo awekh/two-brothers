@@ -1,4 +1,58 @@
 ---
 label: Single page product
 hide_body: true
-fields: []
+fields:
+- name: image
+  type: file
+  config:
+    maxSize: 250
+  label: Image
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: price
+  type: text
+  config:
+    required: false
+  label: Price
+- name: description_block
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: description
+    type: text
+    config:
+      required: false
+    label: Description
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Description block
+- name: category
+  type: select
+  default: business
+  config:
+    required: true
+    options:
+    - sport
+    - casual
+    - business
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Category
+pages:
+- content/./backpacks/Sport/sport-test-product.md
+- content/./backpacks/Casual/casual-test-product-1.md
+- content/./backpacks/Casual/casual-test-product.md
+- content/./backpacks/Business/business-test-product-1.md
+- content/./backpacks/Business/business-test-product.md
