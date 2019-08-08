@@ -37,4 +37,5 @@ weight = 1
 logo = "/images/logo.svg"
 title = ""
 [taxonomies]
-  category = "backpacks"
+  category = "categories"
+  tag = "tags"

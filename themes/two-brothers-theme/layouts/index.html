@@ -27,7 +27,7 @@
 
   
 
-    {{ range $name, $taxonomy := $.Site.Taxonomies.backpacks }}
+    {{ range $name, $taxonomy := $.Site.Taxonomies.category }}
     {{.}}
         <a href="/categories/{{ $name | urlize }}" class="item">{{ $name }}>
 
