@@ -16,7 +16,7 @@ sections:
   match: "*"
 - type: directory
   path: content
-  label: about
+  label: О нас
   create: all
   match: "*/about/"
 - type: directory
