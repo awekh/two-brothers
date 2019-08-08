@@ -36,5 +36,6 @@ fields:
     labelField: 
   label: Description block
 pages:
+- content/./backpacks/Casual/casual-test-product.md
 - content/./backpacks/Business/business-test-product-1.md
 - content/./backpacks/Business/business-test-product.md
