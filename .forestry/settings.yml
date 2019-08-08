@@ -18,7 +18,7 @@ sections:
   path: content
   label: О нас
   create: all
-  match: "*/about/"
+  match: "*/about/*"
 - type: directory
   path: content
   label: Контакты
