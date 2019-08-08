@@ -35,3 +35,5 @@ fields:
     max: 
     labelField: 
   label: Description block
+pages:
+- content/./backpacks/Business/business-test-product.md
