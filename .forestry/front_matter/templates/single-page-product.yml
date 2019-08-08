@@ -1,4 +1,37 @@
 ---
 label: Single page product
 hide_body: true
-fields: []
+fields:
+- name: image
+  type: file
+  config:
+    maxSize: 250
+  label: Image
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: price
+  type: text
+  config:
+    required: false
+  label: Price
+- name: description_block
+  type: field_group_list
+  fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: description
+    type: text
+    config:
+      required: false
+    label: Description
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Description block
