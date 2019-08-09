@@ -1,6 +1,7 @@
 {{ define "main" }}
+
+ {{ with .Params.main_section }}
 <section class="section section-main">
-    {{ with .Params.main_section }}
     <div class="section-main-row">
         <div class="section-info">
             <div class="container">
@@ -20,19 +21,19 @@
         </div>
         <div class="section-media" style="background-image: url('{{ .main_section_background }}')"></div>
     </div>
-    {{ end }}
 </section>
+{{end}}
 
 <section class="section-main-categories">
 
-  
+   {{.}}
 
-    {{ range $name, $taxonomy := $.Site.Taxonomies.category }}
-    {{.}}
-
-    {{ end }}
+          {{ $url := printf "%s/%s" "category" .Site.Params.category | urlize }}
+          {{ $name := printf "%s" .Site.Params.category }}
+          <a href="/{{ $url }}/" class="category-name" title="{{ $name }}">{{ $name }}</a>
       
 
 
 </section>
+
 {{end}}
