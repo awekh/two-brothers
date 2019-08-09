@@ -51,4 +51,5 @@ fields:
       path: 
   label: Category
 pages:
+- content/./categories/product-business-2.md
 - content/./categories/product-business-1.md
