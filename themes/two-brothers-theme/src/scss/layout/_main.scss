@@ -1,4 +1,7 @@
-@import 's-page-title';
-@import 's-carousel';
-@import 's-map';
-@import 'project-slider';
+// Global
+@import 'page-header';
+@import 'page-main';
+@import 'page-footer';
+
+// Blog
+@import './blog/s-blog';

@@ -1,37 +1,58 @@
 {{ define "main" }}
 
- {{ with .Params.main_section }}
+{{ with .Params.main_section }}
+
 <section class="section section-main">
-    <div class="section-main-row">
-        <div class="section-info">
-            <div class="container">
-                <div class="section-copy">
-                    <h1 class="h1">{{ .title }}</h1>
-                    <h2 class="subtitle">{{ .subtitle }}</h2>
-                </div>
-            </div>
+  <div class="section-main-row">
+    <div class="section-info">
+      <div class="container">
+        <div class="section-copy">
+          <h1 class="h1">{{ .title }}</h1>
+          <h2 class="subtitle">{{ .subtitle }}</h2>
         </div>
-        <div class="arrow-anchor">
-          <button class="arrow-down">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M23.9998 48C23.5939 48 23.2644 47.6705 23.2644 47.2646V0.735429C23.2644 0.329472 23.5939 0 23.9998 0C24.4058 0 24.7353 0.329472 24.7353 0.735429V47.2646C24.7353 47.6705 24.4058 48 23.9998 48Z" fill="white"/>
-              <path d="M23.997 48C23.8013 48 23.6146 47.922 23.4763 47.7853L5.04202 29.3451C4.7552 29.0583 4.7552 28.592 5.04202 28.3052C5.32883 28.0184 5.7951 28.0184 6.08191 28.3052L23.9955 46.2247L41.9164 28.3052C42.2033 28.0184 42.6695 28.0184 42.9563 28.3052C43.2432 28.592 43.2432 29.0583 42.9563 29.3451L24.5162 47.7838C24.3779 47.922 24.1926 48 23.997 48Z" fill="white"/>
-            </svg>
-          </button>
-        </div>
-        <div class="section-media" style="background-image: url('{{ .main_section_background }}')"></div>
+      </div>
     </div>
+    <div class="arrow-anchor">
+      <button class="arrow-down">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M23.9998 48C23.5939 48 23.2644 47.6705 23.2644 47.2646V0.735429C23.2644 0.329472 23.5939 0 23.9998 0C24.4058 0 24.7353 0.329472 24.7353 0.735429V47.2646C24.7353 47.6705 24.4058 48 23.9998 48Z"
+            fill="white" />
+          <path
+            d="M23.997 48C23.8013 48 23.6146 47.922 23.4763 47.7853L5.04202 29.3451C4.7552 29.0583 4.7552 28.592 5.04202 28.3052C5.32883 28.0184 5.7951 28.0184 6.08191 28.3052L23.9955 46.2247L41.9164 28.3052C42.2033 28.0184 42.6695 28.0184 42.9563 28.3052C43.2432 28.592 43.2432 29.0583 42.9563 29.3451L24.5162 47.7838C24.3779 47.922 24.1926 48 23.997 48Z"
+            fill="white" />
+        </svg>
+      </button>
+    </div>
+    <div class="section-media" style="background-image: url('{{ .main_section_background }}')"></div>
+  </div>
 </section>
 {{end}}
 
 <section class="section-main-categories">
 
-   {{.}}
+  <div class="categories">
+    
+    {{.Site.Params.category}}
+        
+    {{ range .Data.Pages }}
 
-          {{ $url := printf "%s/%s" "category" .Site.Params.category | urlize }}
-          {{ $name := printf "%s" .Site.Params.category }}
-          <a href="/{{ $url }}/" class="category-name" title="{{ $name }}">{{ $name }}</a>
-      
+    {{ $url := printf "%s/%s" "category" .Site.Params.category | urlize }}
+    {{ $name := printf "%s" .Site.Params.category }}
+    <a href="/{{ $url }}/" class="category-name" title="{{ $name }}">{{ $name }}</a>
+      <div class="col-3 col-t-6 col-m-2">
+        <div class="category">
+          <a href="{{ .Permalink }}">
+            <h3 class="h3">{{ .Title }}</h3>
+          </a>
+        </div>
+      </div>
+    {{ end }}
+    
+  </div>
+
+
+
 
 
 </section>

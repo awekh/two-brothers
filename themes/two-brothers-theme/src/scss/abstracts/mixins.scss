@@ -14,12 +14,18 @@
   transform: translate(-50%);
 }
 
-/* Absolute horizontal centering
+/* Absolute centering
 The same usage like Relative centering */
-@mixin absolute-centering($position) {
+@mixin absolute-vertical-centering {
   position: absolute;
-  $position: 50%;
-  transform: translate(-50%);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin absolute-horizontal-centering {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /*
@@ -118,4 +124,47 @@ The same usage like Relative centering */
   content: $content;
   display: $display;
   position: $pos;
+}
+
+/*
+    Square
+
+    Usage:
+    .element {
+      @include square(60px);
+    }
+
+    CSS output: 
+    .element {
+      width: 60px;
+      height: 60px;
+    }
+*/
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+/*
+    Responsive switch
+
+    Usage:
+    .element {
+      @include square('tablet-lg');
+    }
+    CSS output: 
+    .element {
+      display: none;
+    }
+    @media (max-width: 1024px) {
+      .hamburger {
+        display: block;
+      }
+    }
+*/
+@mixin mobileVisible($breakPoint) {
+  display: none;
+  @include media('<=#{$breakPoint}') {
+    display: block;
+  }
 }

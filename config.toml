@@ -1,6 +1,8 @@
 baseURL = "http://example.org/"
 languageCode = "ru-ru"
 theme = "two-brothers-theme"
+[taxonomies]
+    category = "category"
 [[menu.aside]]
 name = "Главная"
 url = "/"
@@ -8,17 +10,17 @@ weight = 1
 [[menu.aside]]
 identifier = "Спорт"
 name = "Спорт"
-url = "/sport/"
+url = "/category/sport/"
 weight = 4
 [[menu.aside]]
 identifier = "Кэжуал"
 name = "Кэжуал"
-url = "/casual/"
+url = "/category/casual/"
 weight = 3
 [[menu.aside]]
 identifier = "Бизнес"
 name = "Бизнес"
-url = "/business/"
+url = "/category/business/"
 weight = 2
 [[menu.main]]
 name = "Контакты"
@@ -36,6 +38,5 @@ weight = 1
 [params]
 logo = "/images/logo.svg"
 title = ""
-[taxonomies]
-    category = "category"
+
 

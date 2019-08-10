@@ -1,28 +1,46 @@
 {{ define "main" }}
 
-    <section class="s-page-title">
-        <div class="container container--sm">
-            <h2 class="h2">{{ .Title }}</h2>
-            <p class="description">{{ .Description }}</p>
-        </div>
-    </section>
+  <section class="s-blog">
+    <div class="container">
 
-    <section>
+      <div class="section-title">
+        <h2 class="h2">{{ .Title }}</h2>
+        <a href="/blog/" class="back-to-blog"><i class="icon-arrow-back"></i> Back to all posts</a>
+      </div>
+
+      <article class="single-post">
+
+        <div class="single-post__image">
+          <img src="{{ .Params.Image }}" alt="{{ .Title }}">
+        </div>
+
+        <div class="single-post__content">
+          {{ .Params.title }}
+          {{ .Params.price }}
+          {{ .Params.category }}
+
+          {{ range .Params.about_product}}
             <ul>
-              {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
-                <li><a href="{{ "/" | relLangURL}}{{ $taxonomyname | urlize }}">{{ $taxonomyname }}</a>
-                  <ul>
-                    {{ range $key, $value := $taxonomy }}
-                    <li> {{ $key }} </li>
-                          <ul>
-                          {{ range $value.Pages }}
-                              <li hugo-nav="{{ .RelPermalink}}"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
-                          {{ end }}
-                          </ul>
-                    {{ end }}
-                  </ul>
+              <li>
+                <h3 class="title">{{.detali}}</h3>
+              </li>
+              <li>
+                <h3 class="title">
+                  {{.opisanie}}
+                </h3>
+              </li>
+              <li>
+                  <h3 class="title">
+                    {{.razmeri}}
+                  </h3>
                 </li>
-              {{ end }}
             </ul>
-          </section>
+          {{end}}
+        </div>
+
+      </article>
+      
+    </div>
+  </section>
+
 {{ end }}

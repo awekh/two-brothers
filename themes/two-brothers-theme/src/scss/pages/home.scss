@@ -1,7 +1,12 @@
 .section {
+    &-main {
+        height: 100vh;
+        width: 100%;
+    }
     &-main-row {
         position: relative;
         height: 100vh;
+        width: 100%;
 
         .section-info {
             width: 100%;

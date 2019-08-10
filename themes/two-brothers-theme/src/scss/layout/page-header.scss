@@ -1,10 +1,10 @@
 $header-animation-time: 0.5s;
 
-body.navbar-opened {
-    @include media('<tablet-lg') {
-        overflow: hidden;
-    }
-}
+// body.navbar-opened {
+//     @include media('<tablet-lg') {
+//         overflow: hidden;
+//     }
+// }
 
 .header {
     position: fixed;
@@ -14,13 +14,13 @@ body.navbar-opened {
     z-index: 1000;
     transition: background $header-animation-time ease, box-shadow $header-animation-time ease;
 
-    @include media('<tablet-lg') {
-        background: #fff;
+    // @include media('<tablet-lg') {
+    //     background: #fff;
 
-        &.scrolled {
-            box-shadow: 0 1px 4px 0 #eee;
-        }
-    }
+    //     &.scrolled {
+    //         box-shadow: 0 1px 4px 0 #eee;
+    //     }
+    // }
 }
 
 .header-container {
@@ -44,9 +44,9 @@ body.navbar-opened {
     font-size: 30px;
     text-align: center;
 
-    @include media('<tablet-lg') {
-        display: block;
-    }
+    // @include media('<tablet-lg') {
+    //     display: block;
+    // }
 }
 
 .navbar-holder {
@@ -59,9 +59,9 @@ body.navbar-opened {
             @extend %listreset;
             .navbar-item {
                 &:first-of-type {
-                    @include media('>=tablet-lg') {
-                        display: none;
-                    }
+                    // @include media('>=tablet-lg') {
+                    //     display: none;
+                    // }
                 }
 
                 .nav-link {
@@ -78,11 +78,11 @@ body.navbar-opened {
     display: flex;
     align-items: flex-end;
 
-    @include media('<tablet-lg') {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-    }
+    // @include media('<tablet-lg') {
+    //     flex-direction: column;
+    //     align-items: flex-start;
+    //     height: auto;
+    // }
 
     &-item {
         position: relative;
@@ -99,13 +99,13 @@ body.navbar-opened {
             text-transform: uppercase;
             margin-left: 24px;
 
-            @include media('<tablet-lg') {
-                font-size: 40px;
-            }
+            // @include media('<tablet-lg') {
+            //     font-size: 40px;
+            // }
 
-            @include media('<=phone-lg') {
-                font-size: 32px;
-            }
+            // @include media('<=phone-lg') {
+            //     font-size: 32px;
+            // }
 
             &::before {
                 @include pseudo;
@@ -127,13 +127,13 @@ body.navbar-opened {
         }
 
         &:hover {
-            @include media('<tablet-lg') {
-                .nav-link {
-                    &::before {
-                        display: none;
-                    }
-                }
-            }
+            // @include media('<tablet-lg') {
+            //     .nav-link {
+            //         &::before {
+            //             display: none;
+            //         }
+            //     }
+            // }
         }
 
     }
@@ -160,19 +160,19 @@ body.navbar-opened {
     opacity: 0;
     transition: all $header-animation-time ease;
 
-    @include media('<desktop-intermediate') {
-        right: 30px;
-    }
+    // @include media('<desktop-intermediate') {
+    //     right: 30px;
+    // }
 
-    @include media('<tablet-lg') {
-        top: 20px;
-        display: block !important;
-        opacity: 1;
-    }
+    // @include media('<tablet-lg') {
+    //     top: 20px;
+    //     display: block !important;
+    //     opacity: 1;
+    // }
 
-    @include media('<=phone-lg') {
-        right: 20px;
-    }
+    // @include media('<=phone-lg') {
+    //     right: 20px;
+    // }
 
     span {
         width: 18px;

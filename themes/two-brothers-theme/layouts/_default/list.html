@@ -1,28 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
+{{ define "main" }}
 
-{{ $pageId := "" }}
 
-    {{ if .IsHome }}
-        {{ $pageId = "home-page" }}
-    {{ else }}
-        {{ $pageId = "" }}
-    {{ end }}
 
-{{ partial "head.html" . }}
+  <section class="s-blog">
+    <div class="container">
 
-<body id="{{ $pageId }}">
+      <div class="section-title">
 
-    <div id="wrapper">
+        {{ if eq .Section "blog" }}
 
-        {{/*  {{ block "header" . }}{{ partial "header.html" . }}{{ end }}  */}}
+          <!-- Title for blog page -->
+          {{ with .Site.Data.example }}
+            {{ if .section_enable }}
+              <h2 class="h2">{{ .blog_title }}</h2>
+              <p class="desctiption">{{ .blog_description }}</p>
+            {{ end }}
+          {{ end }}
 
-        <main class="main">
-            {{ block "main" .}}{{ end }}
-        </main>
+        {{ else if eq .Section "category" }}
+        {{ . }}
+          <!-- Title for other pages -->
+          <h2 class="h2">{{ .Title }}</h2>
+          <a href="/blog/" class="back-to-blog"><i class="icon-arrow-back"></i> Back to all posts</a>
 
-        {{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
-
+        {{ end }}
+        
+      </div>
+      
+      <div class="categories">
+        
+        {{ range .Data.Pages }}
+          <div class="col-4 col-t-6 col-m-4">
+            <div class="blog__post">
+              <a href="{{ .Permalink }}" title="{{ .Title }}" class="blog__post--image">
+                <img src="{{ .Params.image }}" alt="{{ .Title }}">
+              </a>
+              <a href="{{ .Permalink }}" title="{{ .Title }}" class="blog__post--info">
+                <h3 class="h3">{{ .Title }}</h3>
+              </a>
+              <div class="blog__post--meta">
+                {{ with .Params.Category }}
+                  <a href="/category{{ . | urlize | relURL }}" title="Category: {{ . }}" class="category"> {{ . }}</a>
+                {{ end }}
+                <time>{{ dateFormat "January 2, 2006" .Date }}</time>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+        
+      </div>
+      
     </div>
-</body>
-</html>
+  </section>
+
+{{ end }}
