@@ -5,7 +5,7 @@
 
       <div class="section-title">
         <h2 class="h2">{{ .Title }}</h2>
-        <a href="/blog/" class="back-to-blog"><i class="icon-arrow-back"></i> Back to all posts</a>
+        <a href="/category/" class="back-to-blog"><i class="icon-arrow-back"></i> Back to all posts</a>
       </div>
 
       <article class="single-post">
@@ -18,24 +18,18 @@
           {{ .Params.title }}
           {{ .Params.price }}
           {{ .Params.category }}
+          {{ .Params.Description_block}}
+          <ul>
+            {{/*  {{ range .Params.description_block}}  */}}
 
-          {{ range .Params.about_product}}
-            <ul>
-              <li>
-                <h3 class="title">{{.detali}}</h3>
-              </li>
-              <li>
-                <h3 class="title">
-                  {{.opisanie}}
-                </h3>
-              </li>
-              <li>
-                  <h3 class="title">
-                    {{.razmeri}}
-                  </h3>
+            {{.Params.description_block}}
+            {{.}}
+                <li>
+                  {{/*  <h4 class="h4 title"> {{ .title }} </h4>  */}}
+                  {{/*  <span class="descr"> {{ .description }} </span>  */}}
                 </li>
-            </ul>
-          {{end}}
+            {{/*  {{end}}  */}}
+          </ul>
         </div>
 
       </article>

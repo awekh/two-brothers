@@ -32,22 +32,26 @@
 <section class="section-main-categories">
 
   <div class="categories">
-    
-    {{.Site.Params.category}}
-        
-    {{ range .Data.Pages }}
 
-    {{ $url := printf "%s/%s" "category" .Site.Params.category | urlize }}
-    {{ $name := printf "%s" .Site.Params.category }}
-    <a href="/{{ $url }}/" class="category-name" title="{{ $name }}">{{ $name }}</a>
-      <div class="col-3 col-t-6 col-m-2">
-        <div class="category">
-          <a href="{{ .Permalink }}">
-            <h3 class="h3">{{ .Title }}</h3>
-          </a>
+      <div class="categories">
+        
+          {{ range .Data.Pages }}
+            <div class="col-4 col-t-6 col-m-4">
+              <div class="blog__post">
+                <div class="blog__post--meta">
+                  {{ with .Params.Category }}
+                    <a href="/category{{ . | urlize | relURL }}" title="Category: {{ . }}" class="category"> {{ . }}</a>
+                  {{ end }}
+                  <time>{{ dateFormat "January 2, 2006" .Date }}</time>
+                </div>
+              </div>
+            </div>
+          {{ end }}
+          
         </div>
-      </div>
-    {{ end }}
+
+    
+
     
   </div>
 
