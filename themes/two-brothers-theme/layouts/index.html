@@ -31,29 +31,20 @@
 
 <section class="section-main-categories">
 
-  <div class="categories">
 
-      <div class="categories">
-        
-          {{ range .Data.Pages }}
-            <div class="col-4 col-t-6 col-m-4">
-              <div class="blog__post">
-                <div class="blog__post--meta">
-                  {{ with .Params.Category }}
-                    <a href="/category{{ . | urlize | relURL }}" title="Category: {{ . }}" class="category"> {{ . }}</a>
-                  {{ end }}
-                  <time>{{ dateFormat "January 2, 2006" .Date }}</time>
-                </div>
-              </div>
-            </div>
-          {{ end }}
-          
-        </div>
 
-    
 
-    
+  {{ range .Params.home_page_main_blocks.category }}
+  <div class="item">
+    <div class="media">
+      <img src="{{ .image }}" alt="">
+    </div>
+
+    <a href="/category{{ .label | urlize | relURL }}" title="Category: {{ .label }}" class="label"> {{ .label }}</a>
+
   </div>
+  {{ end }}
+
 
 
 
