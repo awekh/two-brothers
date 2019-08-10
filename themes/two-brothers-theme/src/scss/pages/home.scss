@@ -50,6 +50,7 @@
         background-color: transparent;
         padding: 0;
         min-width: auto;
+        border: none;
       }
     }
 
@@ -108,10 +109,9 @@
         text-transform: uppercase;
         opacity: 0;
         transition: 0.25s;
-
         text-align: center;
-
         color: #ffffff;
+        transform: translate(-50%, -50%);
       }
 
       img {

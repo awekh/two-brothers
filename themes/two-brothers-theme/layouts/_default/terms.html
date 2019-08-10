@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-  <section class="s-blog">
+  <section class="s-backpacks">
     <div class="container">
 
       <div class="section-title">
@@ -8,11 +8,11 @@
         <a href="/blog/" class="back-to-blog"><i class="icon-arrow-back"></i> Back to all posts</a>
       </div>
       
-      <div class="categories">
+      <div class="row">
         
         {{ range .Data.Pages }}
           <div class="col-3 col-t-6 col-m-2">
-            <div class="category">
+            <div class="item">
               <a href="{{ .Permalink }}">
                 <h3 class="h3">{{ .Title }}</h3>
               </a>

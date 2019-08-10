@@ -2,31 +2,29 @@
 
 
 
-  <section class="s-blog">
+  <section class="s-backpacks">
     <div class="container">
 
       <div class="section-title">
 
 
-        {{ if eq .Section "category" }}
+        {{ if eq .Section "backpacks" }}
         {{ . }}
           <!-- Title for other pages -->
           <h2 class="h2">{{ .Title }}</h2>
-          <a href="/blog/" class="back-to-blog"><i class="icon-arrow-back"></i> Back to all posts</a>
-
         {{ end }}
         
       </div>
       
-      <div class="categories">
+      <div class="row">
         
         {{ range .Data.Pages }}
-          <div class="col-4 col-t-6 col-m-4">
+          <div class="item">
             <div class="blog__post">
-              <a href="{{ .Permalink }}" title="{{ .Title }}" class="blog__post--image">
+              <a href="{{ .Permalink }}" class="media">
                 <img src="{{ .Params.image }}" alt="{{ .Title }}">
               </a>
-              <a href="{{ .Permalink }}" title="{{ .Title }}" class="blog__post--info">
+              <a href="{{ .Permalink }}" class="blog__post--info">
                 <h3 class="h3">{{ .Title }}</h3>
               </a>
               <div class="blog__post--meta">

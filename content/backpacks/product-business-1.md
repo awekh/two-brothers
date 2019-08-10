@@ -1,8 +1,8 @@
 +++
-category = "sport"
+category = "business"
 image = "/images/Photo3.jpg"
 price = 99999
-title = "Product business 1"
+title = "Название товара может занят целых две строки"
 [[description_block]]
 description = "тут детали"
 title = "Детали"
