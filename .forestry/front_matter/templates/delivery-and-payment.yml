@@ -25,3 +25,5 @@ fields:
     max: 
     labelField: 
   label: Delivery options
+pages:
+- content/delivery-and-payment/_index.md
