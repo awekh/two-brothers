@@ -3,9 +3,8 @@
     <div class="container">
         <h2 class="h2">{{ .Title }}</h2>
         <p class="description">{{ .Description }}</p>
-        <ul>
-            {{.}}
-            {{ range .Site.Params.delivery_options }}
+        <ul class="delivery-list">
+            {{ range .Params.delivery_options }}
                 <li>
                     <div class="title"> {{ .delivery_name }}</div>
                     <div class="descr">{{ .delivery_description }}</div>
