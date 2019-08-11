@@ -30,5 +30,3 @@ fields:
     max: 
     labelField: 
   label: Delivery options
-pages:
-- content/./delivery-and-payment/оплата-и-доставка.md
