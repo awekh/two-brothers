@@ -4,36 +4,7 @@
         <div class="container container--sm">
 
                 <h2 class="h2">{{ .Title }}</h2>
-                <ul class="list-contacts">
-
-                    {{ with .Params }}
-
-                        <li>
-                            <a href="mailto:{{ .email }}" class="mail">
-                                <span class="icon icon-ic_email"></span>
-                                {{ .email }}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="tel:{{ .phone }}" class="phone">
-                                <span class="icon icon-ic_call"></span>
-                                {{ .phone }}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ .map_link }}" class="map" target="_blank" rel="noreferrer noopener">
-                                <span class="icon icon-ic_place"></span>
-                                {{ .address }}
-                            </a>
-                        </li>
-
-                    {{ end }}
-
-                </ul>
-
-                <a href="/contact_form" class="button contactBtn" data-text="{{ i18n "contact_us" }}">
-                    <span>{{ i18n "contact_us" }}</span>
-                </a>
+                {{.Description}}
         </div>
     </section>
 
