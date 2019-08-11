@@ -21,10 +21,9 @@ sections:
   match: "*"
 - type: directory
   path: content
-  label: Контакты
+  label: Pages content
   create: all
   match: "**/*"
-  exclude: "/contacts/"
 upload_dir: themes/two-brothers-theme/static/images
 public_path: "/images"
 front_matter_path: ''
