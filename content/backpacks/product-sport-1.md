@@ -1,5 +1,5 @@
 +++
-category = "sport"
+category = "Спорт"
 description_block = []
 image = "/images/Photo3.jpg"
 price = 666
