@@ -3,11 +3,6 @@
   <section class="s-backpacks">
     <div class="container">
 
-      <div class="section-title">
-        <h2 class="h2">{{ .Title }}</h2>
-        <a href="/category/" class="back-to-blog"><i class="icon-arrow-back"></i> Back to all backpacks</a>
-      </div>
-
       <article class="single-post">
 
         <div class="single-post__image">
@@ -15,21 +10,20 @@
         </div>
 
         <div class="single-post__content">
-          {{ .Params.title }}
-          {{ .Params.price }}
-          {{ .Params.category }}
-          {{ .Params.Description_block}}
-          <ul>
-            {{/*  {{ range .Params.description_block}}  */}}
-
-            {{.Params.description_block}}
-            {{.}}
-                <li>
-                  {{/*  <h4 class="h4 title"> {{ .title }} </h4>  */}}
-                  {{/*  <span class="descr"> {{ .description }} </span>  */}}
-                </li>
-            {{/*  {{end}}  */}}
+          <h4 class="h4 title"> {{ .Params.title }}</h4>
+          <span class="price">{{ .Params.price }}</span>
+          <a href="" class="btn buy">купить</a>
+          <p class="delivery-descr">Доставка данного товара займет не более 2 дней с момента оформления заказа, 
+              успейте оформить заказ сегодня до 20:00 и уже завтра курьер доставит вашу посылку!</p>
+          <ul class="descr-block">
+            {{ range .Params.Description_block }}
+              <li class="item">
+                  <h5 class="h5 title-sm">{{.title}}</h5>
+                  <h6 class="h6 descr-sm">{{.description}}</h6>
+              </li>
+            {{ end }}
           </ul>
+
         </div>
 
       </article>

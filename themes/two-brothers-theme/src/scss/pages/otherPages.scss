@@ -65,11 +65,90 @@
   }
 }
 
-
-
 #secondaryPage {
   .container {
     padding: 160px 15px 0 480px;
     max-width: 1760px;
+  }
+}
+
+.single-post {
+  display: flex;
+
+  .single-post__content {
+    padding-left: 60px;
+  }
+
+  .title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 48px;
+    line-height: 104%;
+    color: #808080;
+  }
+
+  .price {
+    display: block;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 140%;
+    /* or 34px */
+
+    color: #808080;
+  }
+
+  .buy {
+    background: #f8c018;
+    border-radius: 4px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: #ffffff;
+    display: inline-block;
+    padding: 30px 50px;
+  }
+
+  .delivery-descr {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #808080;
+  }
+
+  .descr-block {
+    @extend %listreset;
+    .title-sm {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 140%;
+      /* or 25px */
+      
+      
+      color: #303030;
+    }
+
+    .descr-sm {
+      font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 140%;
+/* or 20px */
+
+
+color: #808080;
+    }
   }
 }

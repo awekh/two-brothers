@@ -10,17 +10,17 @@ weight = 1
 [[menu.aside]]
 identifier = "Спорт"
 name = "Спорт"
-url = "/category/sport/"
+url = "/category/спорт/"
 weight = 4
 [[menu.aside]]
 identifier = "Кэжуал"
 name = "Кэжуал"
-url = "/category/casual/"
+url = "/category/кэжуал/"
 weight = 3
 [[menu.aside]]
 identifier = "Бизнес"
 name = "Бизнес"
-url = "/category/business/"
+url = "/category/бизнес/"
 weight = 2
 [[menu.main]]
 name = "Контакты"
