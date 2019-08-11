@@ -51,15 +51,10 @@ fields:
       path: 
   label: Category
 pages:
-- content/backpacks/product-business-4.md
-- content/backpacks/product-business-1.md
-- content/backpacks/product-business-3.md
-- content/backpacks/product-business-2.md
-- content/backpacks/product-3.md
+
 - content/./backpacks/product-business-4.md
 - content/./backpacks/product-business-3.md
 - content/./backpacks/product-business-2.md
 - content/./backpacks/product-business-1.md
 - content/./backpacks/product-sport-1.md
 - content/./backpacks/product-3.md
-- content/backpacks/product-sport-1.md
