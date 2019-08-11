@@ -18,3 +18,5 @@ fields:
   - type: number
     name: delivery_name
     label: delivery_name
+pages:
+- content/./delivery-and-payment/_index.md
