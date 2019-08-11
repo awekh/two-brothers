@@ -3,7 +3,17 @@
   .container {
     max-width: 1405px;
     padding-left: 302px;
-    padding-top: 180px;
+    padding-top: 60px;
+  }
+
+  .section-title {
+    margin-bottom: 34px;
+    .title {
+      font-weight: 200;
+      font-size: 48px;
+      line-height: 1.3;
+      color: #808080;
+    }
   }
 }
 
@@ -14,7 +24,7 @@
 
   &-item {
     width: 27.7%;
-    margin: 0 2.8%;
+    margin: 0 2.8% 50px;
 
     .media {
       position: relative;
@@ -52,5 +62,14 @@
       line-height: 140%;
       color: #808080;
     }
+  }
+}
+
+
+
+#secondaryPage {
+  .container {
+    padding: 160px 15px 0 480px;
+    max-width: 1760px;
   }
 }
