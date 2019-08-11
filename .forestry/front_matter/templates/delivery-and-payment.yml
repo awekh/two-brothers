@@ -20,11 +20,6 @@ fields:
     config:
       required: false
     label: Delivery name
-  - name: delivery_description
-    type: text
-    config:
-      required: false
-    label: Delivery description
   config:
     min: 
     max: 
