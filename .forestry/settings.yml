@@ -8,7 +8,7 @@ sections:
   path: content
   label: Оплата и доставка
   create: all
-  match: "*/Delivery and payment/*"
+  match: "*/delivery-and-payment/*"
   templates:
   - delivery-and-payment
 - type: directory
