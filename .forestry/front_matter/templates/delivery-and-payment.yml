@@ -1,4 +1,32 @@
 ---
 label: Delivery and payment
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: description
+  type: text
+  config:
+    required: false
+  label: Description
+- name: delivery_options
+  type: field_group_list
+  fields:
+  - name: delivery_name
+    type: text
+    config:
+      required: false
+    label: Delivery name
+  - name: delivery_description
+    type: text
+    config:
+      required: false
+    label: Delivery description
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Delivery options
