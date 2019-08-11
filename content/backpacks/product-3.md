@@ -1,5 +1,5 @@
 +++
-category = "sport"
+category = "Кэжуал"
 description_block = []
 image = "/images/1.jpg"
 price = 123123
