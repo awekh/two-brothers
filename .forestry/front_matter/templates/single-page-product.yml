@@ -51,4 +51,5 @@ fields:
       path: 
   label: Category
 pages:
+- content/backpacks/product-sport-1.md
 - content/backpacks/product-3.md
