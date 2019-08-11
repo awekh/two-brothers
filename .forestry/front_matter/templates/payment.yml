@@ -1,0 +1,20 @@
+---
+label: Payment
+hide_body: true
+fields:
+- type: textarea
+  name: description
+  label: description
+- type: text
+  name: title
+  label: title
+- type: field_group_list
+  name: delivery_options
+  label: delivery_options
+  fields:
+  - type: number
+    name: delivery_description
+    label: delivery_description
+  - type: number
+    name: delivery_name
+    label: delivery_name
