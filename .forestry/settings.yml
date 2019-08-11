@@ -23,12 +23,14 @@ sections:
   path: content
   label: О нас
   create: all
-  match: "*/about/*"
+  match: "**/*"
+  exclude: "/about/"
 - type: directory
   path: content
   label: Контакты
   create: all
-  match: "*/contacts/*"
+  match: "**/*"
+  exclude: "/contacts/"
 upload_dir: themes/two-brothers-theme/static/images
 public_path: "/images"
 front_matter_path: ''
