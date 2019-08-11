@@ -1,5 +1,5 @@
 +++
-category = "business"
+category = "Спорт"
 image = "/images/Photo2.jpg"
 price = 123123123
 title = "Название товара может занят целых две строки"
