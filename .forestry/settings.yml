@@ -11,13 +11,6 @@ sections:
   match: "*/delivery-and-payment/*"
 - type: directory
   path: content
-  label: Оплата и доставка
-  create: all
-  match: "*/delivery-and-payment/*"
-  templates:
-  - delivery-and-payment
-- type: directory
-  path: content
   label: Categories
   create: all
   match: "*/backpacks/*"
