@@ -54,4 +54,4 @@ fields:
     label: brand logo
   label: Brands
 pages:
-- content/about/_index.md
+- content/./about/_index.md
