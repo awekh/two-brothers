@@ -21,12 +21,6 @@ sections:
   match: "*"
 - type: directory
   path: content
-  label: О нас
-  create: all
-  match: "**/*"
-  exclude: "/about/"
-- type: directory
-  path: content
   label: Контакты
   create: all
   match: "**/*"
