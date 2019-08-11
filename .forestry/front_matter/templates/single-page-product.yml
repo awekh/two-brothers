@@ -50,3 +50,5 @@ fields:
       file: 
       path: 
   label: Category
+pages:
+- content/backpacks/product-3.md
