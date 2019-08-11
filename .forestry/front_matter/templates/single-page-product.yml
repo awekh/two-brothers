@@ -41,9 +41,9 @@ fields:
   config:
     required: true
     options:
-    - sport
-    - casual
-    - business
+    - Спорт
+    - Кэжуал
+    - Бизнес
     source:
       type: simple
       section: 
