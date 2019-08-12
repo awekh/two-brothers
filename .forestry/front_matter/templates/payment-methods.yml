@@ -20,3 +20,5 @@ fields:
     max: ''
     labelField: 
   label: Payment methods
+pages:
+- data/example.yml
