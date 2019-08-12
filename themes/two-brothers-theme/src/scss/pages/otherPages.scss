@@ -75,6 +75,12 @@
     .delivery-list {
       flex-direction: column;
 
+      li {
+        & + li {
+          margin-top: 20px;
+        }
+      }
+
       .payment_name {
         font-family: Roboto;
         font-style: normal;
