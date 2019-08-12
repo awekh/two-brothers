@@ -1,34 +1,38 @@
 {{ define "main" }}
 
-  <section class="s-backpacks">
-    <div class="container">
+<section class="s-backpacks">
+  <div class="container">
 
-      <article class="single-post">
+    <article class="single-post">
 
-        <div class="single-post__image">
-          <img src="{{ .Params.Image }}" alt="{{ .Title }}">
+      <div class="single-post__image">
+        <img src="{{ .Params.Image }}" alt="{{ .Title }}">
+      </div>
+
+      <div class="single-post__content">
+        <h4 class="h4 title"> {{ .Params.title }}</h4>
+        <span class="price">{{ .Params.price }}</span>
+        <a href="" class="btn buy">заказать</a>
+        <p class="delivery-descr">Доставка данного товара займет не более 2 дней с момента оформления заказа,
+          успейте оформить заказ сегодня до 20:00 и уже завтра курьер доставит вашу посылку!</p>
+
+        <div class="descr-block accordion-container">
+          {{ range $index, $element := .Params.Description_block }}
+          <div class="item set">
+            <h5 class="h5 title-sm {{ if (eq $index 0) }}active{{ end }}">{{.title}} <i class="fa fa-plus"></i></h5>
+            <div class="descr-sm content">
+              {{.description}}
+            </div>
+          </div>
+          {{ end }}
         </div>
+      </div>
 
-        <div class="single-post__content">
-          <h4 class="h4 title"> {{ .Params.title }}</h4>
-          <span class="price">{{ .Params.price }}</span>
-          <a href="" class="btn buy">купить</a>
-          <p class="delivery-descr">Доставка данного товара займет не более 2 дней с момента оформления заказа, 
-              успейте оформить заказ сегодня до 20:00 и уже завтра курьер доставит вашу посылку!</p>
-          <ul class="descr-block">
-            {{ range .Params.Description_block }}
-              <li class="item">
-                  <h5 class="h5 title-sm">{{.title}}</h5>
-                  <h6 class="h6 descr-sm">{{.description}}</h6>
-              </li>
-            {{ end }}
-          </ul>
+  </div>
 
-        </div>
+  </article>
 
-      </article>
-      
-    </div>
-  </section>
+  </div>
+</section>
 
 {{ end }}
