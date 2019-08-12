@@ -1,0 +1,10 @@
+---
+label: payment-methods
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: boolean
+  name: section_enable
+  label: section_enable
