@@ -1,0 +1,24 @@
+---
+label: payment-methods
+hide_body: true
+fields:
+- name: payment_methods
+  type: field_group_list
+  fields:
+  - name: payment_name
+    type: text
+    config:
+      required: false
+    label: Payment name
+  - name: payment_description
+    type: text
+    config:
+      required: false
+    label: Payment description
+  config:
+    min: '1'
+    max: ''
+    labelField: 
+  label: Payment methods
+pages:
+- data/example.yml
