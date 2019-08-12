@@ -78,11 +78,26 @@
   &__image {
     margin-right: 5%;
     width: 38%;
+    padding-bottom: 57%;
+    position: relative;
+    height: 0px;
+
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   .single-post__content {
     width: 57%;
     padding-top: 25px;
+    padding-right: 25px;
   }
 
   .title {
@@ -137,7 +152,7 @@
     @extend %listreset;
 
     .item {
-      padding: 0 20px 16px 0;
+      padding: 0 20px 28px 0;
       border-top: 2px solid #F0F0F0;
       border-bottom: 2px solid #F0F0F0;
       & + .item {
