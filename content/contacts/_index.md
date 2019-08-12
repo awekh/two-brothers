@@ -1,5 +1,5 @@
 +++
-description = "Description"
-title = "Contacts 123"
+description = "Тут будут Ваши контакты"
+title = "Контакты"
 
 +++
