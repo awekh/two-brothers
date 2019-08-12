@@ -1,14 +1,18 @@
 {{ define "main" }}
-<section class="section section-about">
+<section class="section section-about section-payment">
     <div class="container">
         <h2 class="h2">{{ .Title }}</h2>
         <p class="description">{{ .Description }}</p>
         <ul class="delivery-list">
-            {{ range .Params.delivery_options }}
-                <li>
-                    <div class="title"> {{ .delivery_name }}</div>
-                    <div class="descr">{{ .delivery_description }}</div>
-                </li>
+            {{ with $.Site.Data.example }}
+
+                {{ range $.Site.Data.example.payment_methods }}
+                    <li>
+                        <div class="payment_name"> {{ .payment_name }}</div>
+                        <div class="payment_description">{{ .payment_description }}</div>
+                    </li>
+                {{ end }}
+
             {{ end }}
         </ul>
         

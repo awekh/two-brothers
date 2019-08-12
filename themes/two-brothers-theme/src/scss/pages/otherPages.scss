@@ -70,6 +70,33 @@
     padding: 160px 15px 0 480px;
     max-width: 1760px;
   }
+
+  .section-payment {
+    .delivery-list {
+      flex-direction: column;
+
+      .payment_name {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        color: #303030;
+        margin-bottom: 10px;
+      }
+      .payment_description {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        color: gray;
+        margin: 10px 0;
+      }
+    }
+  }
 }
 
 .single-post {
@@ -136,6 +163,9 @@
     display: inline-block;
     padding: 30px 129px 26px;
     margin-bottom: 36px;
+    outline: none;
+    border: none;
+    cursor: pointer;
   }
 
   .delivery-descr {
@@ -167,6 +197,7 @@
       line-height: 25px;
       color: #303030;
       padding: 22px 0 0;
+      cursor: pointer;
     }
 
     .descr-sm {

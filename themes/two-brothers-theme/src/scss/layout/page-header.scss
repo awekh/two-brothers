@@ -97,6 +97,11 @@ $header-animation-time: 0.5s;
       text-align: right;
       text-transform: uppercase;
       position: relative;
+      transition: text-shadow 0.25s;
+
+      &:hover {
+        text-shadow: 0 0 .7px #000;
+      }
 
       @include media("<tablet-lg") {
         font-size: 40px;
@@ -105,25 +110,7 @@ $header-animation-time: 0.5s;
       @include media("<=phone-lg") {
         font-size: 32px;
       }
-
-      &::before {
-        @include pseudo;
-        background: #000;
-        height: 2px;
-        width: 0;
-        bottom: 0px;
-        transition: width 0.25s;
-      }
     }
-
-    &:hover {
-      .nav-link {
-        &::before {
-          width: 100%;
-        }
-      }
-    }
-
     &--active {
       .nav-link {
         font-weight: bold;
@@ -225,6 +212,22 @@ $header-animation-time: 0.5s;
     display: block;
     &.another-pages {
       display: none;
+    }
+  }
+}
+
+#secondaryPage {
+
+  .header {
+    &.sticky {
+      background: white;
+      border-bottom: 2px solid#F0F0F0;
+
+      .navbar-item {
+        .nav-link {
+          color: #808080;
+        }
+      }
     }
   }
 }
