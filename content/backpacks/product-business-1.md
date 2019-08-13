@@ -1,6 +1,6 @@
 +++
 category = "Бизнес"
-image = "/images/Photo3.jpg"
+image = "/images/Forestry.mov"
 price = 99999
 title = "Название товара может занять целых две строки"
 [[description_block]]
