@@ -52,9 +52,13 @@ $header-animation-time: 0.5s;
     position: absolute;
     left: 20px;
     top: 128px;
+    @include media('<=desktop-sm') {
+      top: 90px;
+    }
 
     .navbar-secondary {
       @extend %listreset;
+
       .navbar-item {
         margin-left: 0;
         &:first-of-type {
@@ -132,6 +136,10 @@ $header-animation-time: 0.5s;
 .logo {
   display: block;
   margin-bottom: 90px;
+  @include media('<=desktop-sm') {
+         width: 120px;
+         margin-bottom: 40px;
+        }
 }
 
 .logo-icon {
@@ -144,8 +152,7 @@ $header-animation-time: 0.5s;
 .menu-toggler {
   position: absolute;
   top: 30px;
-  // right: 40px;
-  right: -40px;
+  right: 40px;
   padding: 14px 11px;
   background: #222;
   display: flex;

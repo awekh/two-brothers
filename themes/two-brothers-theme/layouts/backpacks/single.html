@@ -17,9 +17,9 @@
           успейте оформить заказ сегодня до 20:00 и уже завтра курьер доставит вашу посылку!</p>
 
         <div class="descr-block accordion-container">
-          {{ range $index, $element := .Params.Description_block }}
+          {{ range .Params.Description_block }}
           <div class="item set">
-            <h5 class="h5 title-sm {{ if (eq $index 0) }}active{{ end }}">{{.title}} <i class="fa fa-plus"></i></h5>
+            <h5 class="h5 title-sm">{{.title}}</h5>
             <div class="descr-sm content">
               {{.description}}
             </div>
