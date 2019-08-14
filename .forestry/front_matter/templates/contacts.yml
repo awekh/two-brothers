@@ -22,3 +22,5 @@ fields:
   config:
     required: false
   label: Map link
+pages:
+- content/contacts/_index.md
