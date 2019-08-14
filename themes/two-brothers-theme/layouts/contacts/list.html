@@ -4,11 +4,12 @@
         <div class="container container--sm">
 
                 <h2 class="h2">{{ .Title }}</h2>
-                <p>{{.Description}}</p>
-                <address> {{ .Address }}</address>
+                <a href="tel:{{ .Params.phone }}">{{ .Params.phone }}</a>
+                <address> {{ .Params.address }}</address>
                 <div id="map">
-                	{{ .map_src}}
+                	{{ .Params.map_link | relURL }}
                 </div>
+                <p>{{ .Params.description }}</p>
         </div>
     </section>
 
