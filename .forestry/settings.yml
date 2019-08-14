@@ -11,11 +11,6 @@ sections:
   match: "**/*"
 - type: directory
   path: content
-  label: Categories
-  create: all
-  match: "*/backpacks/*"
-- type: directory
-  path: content
   label: Pages content
   create: all
   match: "**/*"
