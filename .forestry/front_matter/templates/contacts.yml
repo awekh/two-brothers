@@ -7,8 +7,25 @@ fields:
   config:
     required: false
   label: Title
+- name: phone
+  type: text
+  config:
+    required: false
+  label: Phone
+- name: address
+  type: text
+  config:
+    required: false
+  label: Address
+- name: map_link
+  type: text
+  config:
+    required: false
+  label: Map link
 - name: description
   type: text
   config:
     required: false
   label: Description
+pages:
+- content/contacts/_index.md
