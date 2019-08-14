@@ -7,233 +7,301 @@ $header-animation-time: 0.5s;
 // }
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  transition: background $header-animation-time ease, box-shadow $header-animation-time ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: background $header-animation-time ease, box-shadow $header-animation-time ease;
 
-  @include media("<tablet-lg") {
-    background: #fff;
+    @include media("<tablet-lg") {
+        background: #fff;
+        height: 56px;
+        box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.12);
 
-    &.scrolled {
-      box-shadow: 0 1px 4px 0 #eee;
+        &.scrolled {
+            box-shadow: 0 1px 4px 0 #eee;
+        }
     }
-  }
+
+    .logo-mobile {
+        position: fixed;
+        left: 20px;
+        top: 23px;
+
+        @include media(">=tablet-lg") {
+            display: none;
+        }
+    }
 }
 
 .header-container {
-  @include flex-centering(flex-end);
-  position: relative;
-  max-width: 1720px;
-  padding: 20px;
-  margin: auto;
+    @include flex-centering(flex-end);
+    position: relative;
+    max-width: 1720px;
+    padding: 20px;
+    margin: auto;
+
+    @include media("<tablet-lg") {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        transform: translate(-100%, 0);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        transition: 0.25s;
+        padding-top: 56px;
+    }
+
+    &.opened {
+        transform: none;
+    }
 }
 
 .close-btn {
-  display: none;
-  position: absolute;
-  top: 40px;
-  right: 40px;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  font-size: 30px;
-  text-align: center;
+    display: none;
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 30px;
+    text-align: center;
 
-  @include media("<tablet-lg") {
-    display: block;
-  }
+    @include media("<tablet-lg") {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
 }
 
 .navbar-holder {
-  &-secondary {
-    position: absolute;
-    left: 20px;
-    top: 128px;
-    @include media('<=desktop-sm') {
-      top: 90px;
-    }
+    &-secondary {
+        position: absolute;
+        left: 20px;
+        top: 128px;
 
-    .navbar-secondary {
-      @extend %listreset;
-
-      .navbar-item {
-        margin-left: 0;
-        &:first-of-type {
-          @include media(">=tablet-lg") {
-            display: none;
-          }
+        @include media('<=desktop-sm') {
+            top: 90px;
         }
 
-        .nav-link {
-          text-transform: capitalize;
+        @include media("<tablet-lg") {
+            position: static;
         }
-      }
+
+        .navbar-secondary {
+            @extend %listreset;
+
+            .navbar-item {
+                margin-left: 0;
+
+                @include media("<tablet-lg") {
+                    margin: 0 auto;
+                    text-align: center;
+                }
+
+                &:first-of-type {
+                    @include media(">=tablet-lg") {
+                        display: none;
+                    }
+                }
+
+                .nav-link {
+                    text-transform: capitalize;
+
+                    @include media("<tablet-lg") {
+                        text-transform: uppercase;
+                        text-align: center;
+                    }
+                }
+            }
+        }
     }
-  }
 }
 
 .navbar {
-  @extend %listreset;
-  display: flex;
-  align-items: flex-end;
-
-  @include media("<tablet-lg") {
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
-  }
-
-  &-item {
-    margin-left: 24px;
+    @extend %listreset;
+    display: flex;
+    align-items: flex-end;
 
     @include media("<tablet-lg") {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        text-align: center;
     }
 
-    .nav-link {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 180%;
-      color: #808080;
-      text-align: right;
-      text-transform: uppercase;
-      position: relative;
-      transition: text-shadow 0.25s;
+    &-item {
+        margin-left: 24px;
 
-      &:hover {
-        text-shadow: 0 0 .7px #000;
-      }
-
-      @include media("<tablet-lg") {
-        font-size: 40px;
-      }
-
-      @include media("<=phone-lg") {
-        font-size: 32px;
-      }
-    }
-    &--active {
-      .nav-link {
-        font-weight: bold;
-      }
-    }
-
-    &:hover {
-      @include media("<tablet-lg") {
-        .nav-link {
-          &::before {
-            display: none;
-          }
+        @include media("<tablet-lg") {
+            margin-left: 0;
         }
-      }
+
+        .nav-link {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 180%;
+            color: #808080;
+            text-align: right;
+            text-transform: uppercase;
+            position: relative;
+            transition: text-shadow 0.25s;
+            @include media("<tablet-lg") {
+            color: #fff
+        }
+
+            &:hover {
+                text-shadow: 0 0 .7px #000;
+            }
+
+            @include media("<tablet-lg") {
+                font-size: 26px;
+            }
+        }
+
+        &--active {
+            .nav-link {
+                font-weight: bold;
+            }
+        }
+
+        &:hover {
+            @include media("<tablet-lg") {
+                .nav-link {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
-  }
 }
 
 .logo {
-  display: block;
-  margin-bottom: 90px;
-  @include media('<=desktop-sm') {
-         width: 120px;
-         margin-bottom: 40px;
-        }
+    display: block;
+    margin-bottom: 90px;
+
+    @include media('<=desktop-sm') {
+        width: 120px;
+        margin-bottom: 40px;
+    }
+
+    @include media("<tablet-lg") {
+        display: none;
+    }
 }
 
 .logo-icon {
-  display: none;
-  &.another-pages {
-    display: block;
-  }
+    display: none;
+
+    &.another-pages {
+        display: block;
+    }
 }
 
 .menu-toggler {
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  padding: 14px 11px;
-  background: #222;
-  display: flex;
-  flex-direction: column;
-  outline: none;
-  max-width: 40px;
-  min-width: 40px;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.13);
-  opacity: 0;
-  transition: all $header-animation-time ease;
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    padding: 14px 11px;
+    background: transparent;
+    display: none;
+    flex-direction: column;
+    outline: none;
+    max-width: 40px;
+    min-width: 40px;
+    opacity: 0;
+    border: none;
+    transition: all $header-animation-time ease;
+  
 
-  @include media("<tablet-lg") {
-    top: 20px;
-    display: block !important;
-    opacity: 1;
-  }
-
-  @include media("<=phone-lg") {
-    right: 20px;
-  }
-
-  span {
-    width: 18px;
-    height: 2px;
-    background: #fff;
-    display: block;
-
-    & + span {
-      margin-top: 3px;
+    @include media("<tablet-lg") {
+        display: flex !important;
+        opacity: 1;
     }
-  }
+
+    @include media("<=phone-lg") {
+        right: 20px;
+    }
+
+    span {
+        width: 18px;
+        height: 2px;
+        background: #C4C4C4;
+        display: block;
+
+        &+span {
+            margin-top: 3px;
+        }
+    }
 }
 
 #home-page {
 
-  .header {
-    &.sticky {
-      background: white;
-      border-bottom: 2px solid#F0F0F0;
+    .header {
+        &.sticky {
+            background: white;
+            border-bottom: 2px solid#F0F0F0;
 
-      .navbar-item {
+            .navbar-item {
+                .nav-link {
+                    color: #808080;
+                }
+            }
+
+            .navbar-secondary {
+                .navbar-item {
+                    .nav-link {
+                        color: #fff;
+                        @include media("<tablet-lg") {
+            color: #fff
+        }
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-item {
         .nav-link {
-          color: #808080;
-        }
-      }
-
-      .navbar-secondary {
-        .navbar-item {
-          .nav-link {
             color: #fff;
-          }
         }
-      }
     }
-  }
 
-  .navbar-item {
-    .nav-link {
-      color: #fff;
+    .logo-icon {
+        display: block;
+
+        &.another-pages {
+            display: none;
+        }
     }
-  }
-  .logo-icon {
-    display: block;
-    &.another-pages {
-      display: none;
-    }
-  }
 }
 
 #secondaryPage {
 
-  .header {
-    &.sticky {
-      background: white;
-      border-bottom: 2px solid#F0F0F0;
-
-      .navbar-item {
-        .nav-link {
-          color: #808080;
+    .header {
+        &.sticky {
+            background: white;
+            border-bottom: 2px solid#F0F0F0;
+            @include media("<tablet-lg") {
+            border-bottom: none;
         }
-      }
+
+            .navbar-item {
+                .nav-link {
+                    color: #808080;
+                     @include media("<tablet-lg") {
+            color: #fff
+        }
+                }
+            }
+        }
     }
-  }
 }

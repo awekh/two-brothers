@@ -1,10 +1,26 @@
 #backpacks {
     padding-top: 100px;
 
+    @include media("<tablet-lg") {
+        padding-top: 56px;
+    }
+
     .container {
         max-width: 1405px;
         padding-left: 302px;
         padding-top: 60px;
+
+        @include media('<=desktop-md') {
+            padding: 40px 15px 0 300px;
+        }
+
+        @include media('<=desktop-sm') {
+            padding: 30px 15px 0 200px;
+        }
+
+        @include media("<tablet-lg") {
+            padding: 30px 15px 0;
+        }
     }
 
     .section-title {
@@ -24,9 +40,37 @@
     flex-wrap: wrap;
     margin: 0 -32px;
 
+    @include media('<=desktop-md') {
+        margin: 0 -16px;
+    }
+
+    @include media("<tablet-lg") {
+        margin: 0 -15px;
+    }
+
+    @include media('<=phone-lg') {
+        margin: 0;
+    }
+
     &-item {
         width: 27.7%;
         margin: 0 2.8% 50px;
+
+        @include media("<tablet-lg") {
+            width: 33.33%;
+            padding: 0 15px;
+            margin: 0;
+        }
+
+        @include media('<=tablet-sm') {
+            width: 50%;
+        }
+
+        @include media('<=phone-lg') {
+            width: 100%;
+            padding: 0;
+            margin: 15px 0;
+        }
 
         .media {
             position: relative;
@@ -71,6 +115,19 @@
     .container {
         padding: 160px 15px 0 480px;
         max-width: 1760px;
+
+        @include media('<=desktop-md') {
+            padding: 100px 15px 0 300px;
+        }
+
+        @include media('<=desktop-sm') {
+            padding: 100px 15px 0 200px;
+        }
+
+        @include media("<tablet-lg") {
+            padding: 100px 15px 0;
+        }
+
     }
 
     .section-payment {
@@ -110,6 +167,9 @@
 
 .single-post {
     display: flex;
+    @include media('<=phone-lg') {
+            flex-wrap: wrap;
+        }
 
     &__image {
         margin-right: 5%;
@@ -117,8 +177,14 @@
         padding-bottom: 57%;
         position: relative;
         height: 0px;
+        @include media('<=phone-lg') {
+            width: 100%;
+            margin: 0 0 25px;
+            padding-bottom: 120%;
+        }
 
-        img video {
+        img,
+        video {
             position: absolute;
             top: 0;
             right: 0;
@@ -134,6 +200,10 @@
         width: 57%;
         padding-top: 25px;
         padding-right: 25px;
+        @include media('<=phone-lg') {
+           width: 100%;
+            padding: 0;
+        }
     }
 
     .title {
@@ -144,6 +214,11 @@
         line-height: 1;
         color: #808080;
         margin-bottom: 23px;
+
+        @include media("<tablet-lg") {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
 
         &::after {
             content: '';
@@ -164,6 +239,10 @@
         line-height: 34px;
         color: #808080;
         margin-bottom: 22px;
+
+        @include media("<tablet-lg") {
+            font-size: 18px;
+        }
     }
 
     .buy {
@@ -184,6 +263,15 @@
         outline: none;
         border: none;
         cursor: pointer;
+        transition: 0.25s;
+
+        @include media("<tablet-lg") {
+            padding: 20px 40px;
+        }
+
+        &:hover {
+            background: darken(#f8c018, 10%);
+        }
     }
 
     .delivery-descr {
@@ -218,6 +306,26 @@
             color: #303030;
             padding: 22px 0 0;
             cursor: pointer;
+            position: relative;
+
+            &.active {
+                &::after {
+                    transform: rotate(-135deg);
+                }
+            }
+
+            &::after {
+                content: '';
+                width: 7px;
+                height: 7px;
+                border-bottom: 2px solid black;
+                border-right: 2px solid black;
+                position: absolute;
+                top: 30px;
+                right: 20px;
+                transform: rotate(45deg);
+                transition: transform .25s;
+            }
         }
 
         .descr-sm {
@@ -241,28 +349,35 @@
         font-size: 48px;
         line-height: 2;
         color: #000000;
+        display: block;
+        @include media('<=tablet-sm') {
+            font-size: 36px;
+            margin-top: 30px;
+        }
     }
+
     address {
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 24px;
-      line-height: 2;
-      color: #808080;
-      margin-bottom: 40px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 2;
+        color: #808080;
+        margin-bottom: 40px;
     }
 
     #map {
-      height: 400px;
-      position: relative;
-      iframe {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%; 
-      }
+        height: 400px;
+        position: relative;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     }
 }

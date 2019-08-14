@@ -135,8 +135,7 @@
     tasks: {
       buildSassFiles: cfg.task.buildSassFiles,
       buildCustomJs: cfg.task.buildCustomJs,
-      buildSass: cfg.task.buildSass,
-      esLint: cfg.task.esLint
+      buildSass: cfg.task.buildSass, 
     }
   }, false);
 

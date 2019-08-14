@@ -8,7 +8,6 @@ const stickyHeader = {
       $window.on('scroll', () => {
         if ($window.scrollTop() > $sticky) {
           $header.addClass('sticky');
-          console.log('123');
         } else {
           $header.removeClass('sticky');
         }
