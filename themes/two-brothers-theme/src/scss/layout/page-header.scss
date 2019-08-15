@@ -153,9 +153,10 @@ $header-animation-time: 0.5s;
             text-transform: uppercase;
             position: relative;
             transition: text-shadow 0.25s;
+
             @include media("<tablet-lg") {
-            color: #fff
-        }
+                color: #fff
+            }
 
             &:hover {
                 text-shadow: 0 0 .7px #000;
@@ -220,7 +221,7 @@ $header-animation-time: 0.5s;
     opacity: 0;
     border: none;
     transition: all $header-animation-time ease;
-  
+
 
     @include media("<tablet-lg") {
         display: flex !important;
@@ -253,6 +254,10 @@ $header-animation-time: 0.5s;
             .navbar-item {
                 .nav-link {
                     color: #808080;
+
+                    @include media("<tablet-lg") {
+                        color: #fff
+                    }
                 }
             }
 
@@ -260,9 +265,10 @@ $header-animation-time: 0.5s;
                 .navbar-item {
                     .nav-link {
                         color: #fff;
+
                         @include media("<tablet-lg") {
-            color: #fff
-        }
+                            color: #fff
+                        }
                     }
                 }
             }
@@ -272,6 +278,10 @@ $header-animation-time: 0.5s;
     .navbar-item {
         .nav-link {
             color: #fff;
+
+            @include media("<tablet-lg") {
+                color: #fff !important;
+            }
         }
     }
 
@@ -290,18 +300,37 @@ $header-animation-time: 0.5s;
         &.sticky {
             background: white;
             border-bottom: 2px solid#F0F0F0;
+
             @include media("<tablet-lg") {
-            border-bottom: none;
-        }
+                border-bottom: none;
+            }
 
             .navbar-item {
                 .nav-link {
                     color: #808080;
-                     @include media("<tablet-lg") {
-            color: #fff
-        }
+
+                    @include media("<tablet-lg") {
+                        color: #fff
+                    }
                 }
             }
         }
     }
+}
+
+#backpacks {
+    .header {
+
+        .navbar-secondary {
+            .navbar-item {
+                &--active {
+                    .nav-link {
+                        font-weight: bold;
+                        color: #F8C018;
+                    }
+                }
+            }
+        }
+    }
+
 }

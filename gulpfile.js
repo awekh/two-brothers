@@ -1,7 +1,7 @@
 (() => {
   'use strict';
 
-  const cfg         = require('./gulp-config.js'),
+   const cfg         = require('./gulp-config.js'),
         self        = this,
         gulp        = require('gulp'),
         del         = require('del'),
@@ -10,7 +10,7 @@
         gutil       = require('gulp-util'),
         shell       = require('gulp-shell');
 
-  /**
+   /**
    * Require gulp task from file
    * @param  {string} taskName     Task name
    * @param  {String} path         Path to task file
@@ -21,14 +21,14 @@
     let settings = options || {};
     const taskFunction = function (callback) {
 
-      let task = require(path + taskName + '.js').call(this, settings);
+       let task = require(path + taskName + '.js').call(this, settings);
 
-      return task(callback);
+       return task(callback);
     }
 
-    settings.taskName = taskName;
+     settings.taskName = taskName;
 
-    if (!Array.isArray(dependencies)) {
+     if (!Array.isArray(dependencies)) {
       gulp.task(taskName, taskFunction);
     } else if (dependencies.length === 1) {
       gulp.task(taskName, gulp.series(dependencies[0], taskFunction));
@@ -37,16 +37,16 @@
     }
   }
 
-  /**
+   /**
    * Lint ES
    */
 
-  requireTask(`${cfg.task.esLint}`, `./${cfg.folder.tasks}/`, {
+   requireTask(`${cfg.task.esLint}`, `./${cfg.folder.tasks}/`, {
     src: cfg.folder.src,
     theme: cfg.folder.theme
   });
 
-  /**
+   /**
    * Build custom js
    */
   requireTask(`${cfg.task.buildCustomJs}`, `./${cfg.folder.tasks}/`, {
@@ -57,7 +57,7 @@
     showError: showError
   });
 
-  /**
+   /**
    * Build js vendor (concatenate vendors array)
    */
   requireTask(`${cfg.task.buildJsVendors}`, `./${cfg.folder.tasks}/`, {
@@ -68,7 +68,7 @@
     vendorJsMin: cfg.file.vendorJsMin
   });
 
-  /**
+   /**
    * Build styles for application from SASS
    */
   requireTask(`${cfg.task.buildSass}`, `./${cfg.folder.tasks}/`, {
@@ -82,7 +82,7 @@
     showError: showError
   });
 
-  /**
+   /**
    * Compile scss files listed in the config
    */
   requireTask(`${cfg.task.buildSassFiles}`, `./${cfg.folder.tasks}/`, {
@@ -94,7 +94,7 @@
     showError: showError
   });
 
-  /**
+   /**
    * Build styles for vendor from SASS
    */
   requireTask(`${cfg.task.buildStylesVendors}`, `./${cfg.folder.tasks}/`, {
@@ -106,7 +106,7 @@
     showError: showError
   });
 
-  /**
+   /**
    * Clean build folder
    */
   requireTask(`${cfg.task.cleanBuild}`, `./${cfg.folder.tasks}/`, {
@@ -114,17 +114,17 @@
     theme: cfg.folder.theme
   });
 
-  /**
+   /**
    * Clean public dir
    */
   gulp.task(`${cfg.task.cleanPublic}`, shell.task('rm -rf public'));
-  
-  /**
+
+   /**
    * Build Hugo
    */
   gulp.task(`${cfg.task.buildHugo}`, shell.task('hugo --minify'));
 
-  /**
+   /**
    * Watch for file changes
    */
   requireTask(`${cfg.task.watch}`, `./${cfg.folder.tasks}/`, {
@@ -135,11 +135,12 @@
     tasks: {
       buildSassFiles: cfg.task.buildSassFiles,
       buildCustomJs: cfg.task.buildCustomJs,
-      buildSass: cfg.task.buildSass, 
+      buildSass: cfg.task.buildSass,
+      esLint: cfg.task.esLint
     }
   }, false);
 
-  /**
+   /**
    * Default Gulp task
    */
   gulp.task('default', gulp.series(
@@ -162,7 +163,7 @@
     )
   ));
 
-  /**
+   /**
    * Show error in console
    * @param  {String} preffix Title of the error
    * @param  {String} err     Error message
@@ -175,4 +176,4 @@
     });
     this.emit('end');
   }
-})();
+})(); 
