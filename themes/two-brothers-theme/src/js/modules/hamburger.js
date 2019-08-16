@@ -8,18 +8,18 @@ const hamburger = {
 
     function hamburgerToggle() {
       $btn.on('click', function switcher() {
-          $(this).toggleClass(OPENED_CLASS);
-          $menu.toggleClass(OPENED_CLASS);
-          $body.toggleClass(OVERLAY_CLASS);
-        });
+        $(this).toggleClass(OPENED_CLASS);
+        $menu.toggleClass(OPENED_CLASS);
+        $body.toggleClass(OVERLAY_CLASS);
+      });
     }
 
     function init() {
-        if (!$btn.length) return;
-        hamburgerToggle();
+      if (!$btn.length) return;
+      hamburgerToggle();
     }
     return {
-        init: init(),
+      init: init(),
     };
   },
 };
