@@ -4,6 +4,8 @@ secondary_description = "Таким образом сложившаяся стр
 section_brands_title = "Бренды"
 title = "О нас"
 [[brands.brand_logo]]
+logo = ""
+[[brands.brand_logo]]
 logo = "/images/Group.png"
 [[brands.brand_logo]]
 logo = "/images/Group.png"
