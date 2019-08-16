@@ -12,18 +12,5 @@ fields:
   config:
     required: false
   label: Description
-- name: delivery_options
-  type: field_group_list
-  fields:
-  - name: delivery_name
-    type: text
-    config:
-      required: false
-    label: Delivery name
-  config:
-    min: 
-    max: 
-    labelField: 
-  label: Delivery options
 pages:
 - content/delivery-and-payment/_index.md
